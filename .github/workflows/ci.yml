@@ -40,7 +40,9 @@ jobs:
       - name: Build
         run: npm run build
       - name: Docs
-        run: npm run typedoc
+        run: |
+          npm run typedoc:md
+          npm run typedoc:html
       - name: Test
         run: npm test
       - name: Upload Code Coverage
