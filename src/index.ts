@@ -1,7 +1,7 @@
 /**
  * > Template to kickstart creating a Node.js module using TypeScript and VSCode
  *
- * Inspired by [node-module-boilerplate](https://github.com/sindresorhus/node-module-boilerplate)
+ * Inspired by [node-module-boilerplate](https://github.com/sindresorhus/node-module-boilerplate) and [typescript-npm-package-template](https://github.com/Atry/typescript-npm-package-template/tree/main)
  *
  * ## Features
  *
@@ -16,9 +16,10 @@
  * - [Commitizen](https://github.com/search?q=commitizen)
  * - [Jest](https://jestjs.io/)
  * - [ESLint](https://eslint.org/)
- * - [API Documentation Generation](https://stackoverflow.com/a/57052392/955091)
- *   - [TypeDoc](https://typedoc.org/)
- *   - [typedoc-plugin-markdown](https://github.com/tgreyuk/typedoc-plugin-markdown/tree/master/packages/typedoc-plugin-markdown)
+ * - [GitHub Pages](https://pages.github.com/)
+ * - [TypeDoc](https://typedoc.org/)
+ * - [typedoc-plugin-markdown](https://github.com/tgreyuk/typedoc-plugin-markdown/tree/master/packages/typedoc-plugin-markdown)
+ * - [Renovate](https://docs.renovatebot.com/)
  *
  * ## Getting started
  *
@@ -54,7 +55,7 @@
  *
  * ---
  *
- * # my-package-name
+ * # npm-package-template
  *
  * [![npm package][npm-img]][npm-url]
  * [![Build Status][build-img]][build-url]
@@ -69,13 +70,13 @@
  * ## Install
  *
  * ```bash
- * npm install my-package-name
+ * npm install npm-package-template
  * ```
  *
  * ## Usage
  *
  * ```ts
- * import { myPackage } from 'my-package-name';
+ * import { myPackage } from 'npm-package-template';
  *
  * myPackage('hello');
  * //=> 'hello from my package'
@@ -95,6 +96,8 @@
  * [semantic-release-url]:https://github.com/semantic-release/semantic-release
  * [commitizen-img]:https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
  * [commitizen-url]:http://commitizen.github.io/cz-cli/
+ *
+ * ## API Reference
  *
  * @module
  */
