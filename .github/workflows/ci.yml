@@ -75,7 +75,9 @@ jobs:
       - name: Build
         run: npm run build
       - name: Docs
-        run: npm run typedoc
+        run: |
+          npm run typedoc:md
+          npm run typedoc:html
       - name: Release
         if: github.ref_name == 'main'
         uses: cycjimmy/semantic-release-action@v4
@@ -85,7 +87,7 @@ jobs:
       - name: Upload Documentation
         uses: actions/upload-artifact@v4
         with:
-          path: docs
+          path: public
           name: github-pages
       - name: Deploy Documentation to GitHub Pages
         id: deployment
