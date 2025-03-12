@@ -2,7 +2,7 @@
   "name": "npm-package-template",
   "type": "commonjs",
   "version": "0.0.0-development",
-  "description": "A template for creating npm packages using TypeScript",
+  "description": "A template for creating npm packages using TypeScript. Note that this is a generated sample package.",
   "author": {
     "name": "34j"
   },
