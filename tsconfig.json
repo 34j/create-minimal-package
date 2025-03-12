@@ -1,0 +1,14 @@
+{
+  "extends": "@tsconfig/strictest/tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2016",
+    "lib": ["ESNext"],
+    "baseUrl": "./src",
+    "module": "CommonJS",
+    "paths": {
+      "@/*": ["*"]
+    },
+    "outDir": "./dist"
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts"]
+}
