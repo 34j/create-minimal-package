@@ -16,11 +16,9 @@
  * - [Commitizen](https://github.com/search?q=commitizen)
  * - [Jest](https://jestjs.io/)
  * - [ESLint](https://eslint.org/)
- * - [Prettier](https://prettier.io/)
  * - [API Documentation Generation](https://stackoverflow.com/a/57052392/955091)
  *   - [TypeDoc](https://typedoc.org/)
  *   - [typedoc-plugin-markdown](https://github.com/tgreyuk/typedoc-plugin-markdown/tree/master/packages/typedoc-plugin-markdown)
- *   - [concat-md](https://github.com/ozum/concat-md)
  *
  * ## Getting started
  *
