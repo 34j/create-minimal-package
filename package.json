@@ -41,7 +41,6 @@
     "typedoc:md": "typedoc --plugin typedoc-plugin-markdown --out ./docs && cp docs/README.md README.md",
     "typedoc:html": "typedoc --out ./public",
     "typedoc:watch": "typedoc --watch",
-    "typedoc-copyreadme:watch": "cp docs/README.md README.md",
     "test:watch": "jest --watch",
     "test": "jest --coverage",
     "watch": "npm-run-all --race --parallel *:watch",
