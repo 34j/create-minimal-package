@@ -1,7 +1,7 @@
 {
   "name": "create-minimal-package",
   "type": "commonjs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Minimalistic npm package template with 📦🚀semantic-release + Commitizen, CodeCov, Renovate, 🐶Husky + pre-commit (✗Lint Staged + EsLint), 👢Jest, 📖TypeDoc + Github Pages support. Note that this is a generated sample package.",
   "author": {
     "name": "34j"
