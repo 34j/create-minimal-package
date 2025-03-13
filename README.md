@@ -35,7 +35,7 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
 
 - Removed Commitizen integration and VS Code stuff (from [ryansonshine/typescript-npm-package-template](https://github.com/ryansonshine/typescript-npm-package-template)) because it's not maintained and complex. Commitizen can be still used (Semantic Release supports it natively).
 - Removed Nix stuff and typedoc-plugin-markdown (from [typescript-npm-package-template](https://github.com/Atry/typescript-npm-package-template/tree/main)) because it's not necessary.
-- Removed Prettier due to [@antfu/eslint-config's opinions](https://github.com/antfu/eslint-config?tab=readme-ov-file#prettier).
+- Removed Prettier due to [@antfu/eslint-config's opinions](https://github.com/antfu/eslint-config?tab=readme-ov-file#prettier) and [mirrors-prettier](https://github.com/pre-commit/mirrors-prettier) being archived.
 
 </details>
 

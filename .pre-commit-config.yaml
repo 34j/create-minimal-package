@@ -1,11 +1,11 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
-exclude: "CHANGELOG.md|.all-contributorsrc"
+exclude: 'CHANGELOG.md|.all-contributorsrc'
 default_stages: [pre-commit]
 
 ci:
-  autofix_commit_msg: "chore(pre-commit.ci): auto fixes"
-  autoupdate_commit_msg: "chore(pre-commit.ci): pre-commit autoupdate"
+  autofix_commit_msg: 'chore(pre-commit.ci): auto fixes'
+  autoupdate_commit_msg: 'chore(pre-commit.ci): pre-commit autoupdate'
 
 repos:
   - repo: https://github.com/commitizen-tools/commitizen
@@ -32,4 +32,7 @@ repos:
   - repo: https://github.com/pre-commit/mirrors-eslint
     rev: v9.22.0
     hooks:
-    -   id: eslint
+      - id: eslint
+        entry: eslint --fix
+        files: ''
+        types: [file]
