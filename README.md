@@ -18,7 +18,8 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
 - 👾Github
   - [📦🚀semantic-release](https://github.com/semantic-release/semantic-release) & [Commitizen](https://github.com/search?q=commitizen): from [this article](https://zenn.dev/wakamsha/articles/learn-semantic-release)
   - [New Issue Templates](https://github.com/34j/create-minimal-package/tree/main/.github/ISSUE_TEMPLATE): from [browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template/tree/main/.github/ISSUE_TEMPLATE)
-  - [💨GitHub Actions](https://github.com/34j/create-minimal-package/tree/main/.github/workflows) and [Codecov](https://about.codecov.io/): npm version of [browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template/blob/main/.github/workflows/ci.yml)
+  - [💨GitHub Actions](https://github.com/34j/create-minimal-package/tree/main/.github/workflows) + [📊Codecov](https://about.codecov.io/): npm version of [browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template/blob/main/.github/workflows/ci.yml)
+  - [🧱Renovate](https://docs.renovatebot.com/): inherits [config:best-practices](https://docs.renovatebot.com/presets-config/#configbest-practices)
 - [⚙TypeScript](https://www.typescriptlang.org/):`tsconfig.json`,`tsconfig.build.json`(w/o tests): inherits [@tsconfig/strictest](https://www.npmjs.com/package/@tsconfig/strictest): 4 lines for `☆`, [3 lines for ES types](https://youtu.be/H91aqUHn8sE?t=148)
 - ✨️Formatting
   - [🐶Husky](https://github.com/typicode/husky): runs Lint Staged and typedoc
@@ -29,7 +30,6 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
 - 📖Documentation
   - [🌐GitHub Pages](https://pages.github.com/)
   - [📖TypeDoc](https://typedoc.org/): 2 lines for `☆` `P`
-  - [🧱Renovate](https://docs.renovatebot.com/): inherits [config:best-practices](https://docs.renovatebot.com/presets-config/#configbest-practices)
 
 <details>
 <summary>Removed Features (to achieve minimalism)</summary>
