@@ -31,3 +31,4 @@ repos:
     rev: v9.22.0
     hooks:
     -   id: eslint
+        additional_dependencies: ["eslint@9.22.0", "@antfu/eslint-config"]
