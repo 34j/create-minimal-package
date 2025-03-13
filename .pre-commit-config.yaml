@@ -27,6 +27,8 @@ repos:
       - id: detect-private-key
       - id: end-of-file-fixer
       - id: trailing-whitespace
+  # additional_dependencies won't work for ESM modules
+  # https://stackoverflow.com/questions/77253791/how-to-get-new-style-eslint-config-working-with-pre-commit
   - repo: https://github.com/pre-commit/mirrors-eslint
     rev: v9.22.0
     hooks:

@@ -52,7 +52,7 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
   ```
 3. Add `NPM_TOKEN` to `Settings/Secrets and variables/Actions/Repository secrets`.
 4. Enable [Codecov GitHub App](https://github.com/apps/codecov) and add `CODECOV_TOKEN` to `Settings/Secrets and variables/Actions/Repository secrets`.
-5. Install GitHub Apps, [pre-commit.ci](https://github.com/apps/pre-commit-ci) and [Codecov](https://github.com/apps/codecov).
+5. Install GitHub Apps, [pre-commit.ci lite](https://github.com/apps/pre-commit-ci-lite/installations/select_target) and [Codecov](https://github.com/apps/codecov/installations/select_target).
 6. Install [pre-commit](https://pre-commit.com/) using [`uv`](https://github.com/astral-sh/uv); `uv tool install pre-commit`.
 7. Remove everything above `---`.
 
