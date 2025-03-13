@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/34j/create-minimal-package/compare/v1.2.0...v1.3.0) (2025-03-13)
+
+
+### Features
+
+* migrate to pnpm ([ee5ec4f](https://github.com/34j/create-minimal-package/commit/ee5ec4f09dded28f8a498361696422cc2ef13412))
+* migrate to pnpm ([67c84d5](https://github.com/34j/create-minimal-package/commit/67c84d592b7f2141ed5f8dafdca740d1406c1e22))
+
 # [1.2.0](https://github.com/34j/create-minimal-package/compare/v1.1.1...v1.2.0) (2025-03-13)
 
 
