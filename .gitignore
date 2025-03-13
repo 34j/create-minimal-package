@@ -120,6 +120,5 @@ lib/
 
 # TypeDoc (markdown and html)
 docs/
-public/
 /CHANGELOG.md linguist-generated
 /README.md linguist-generated
