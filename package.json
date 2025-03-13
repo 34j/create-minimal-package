@@ -37,9 +37,7 @@
     "build": "tsc --project tsconfig.build.json",
     "lint": "eslint --fix",
     "prepare": "husky",
-    "semantic-release": "semantic-release",
-    "typedoc:md": "typedoc --plugin typedoc-plugin-markdown --out ./docs && cp docs/README.md README.md",
-    "typedoc:html": "typedoc --out ./public",
+    "typedoc": "typedoc",
     "typedoc:watch": "typedoc --watch",
     "test:watch": "jest --watch",
     "test": "jest --coverage",
@@ -64,7 +62,6 @@
     "semantic-release": "^24.2.3",
     "ts-jest": "^29.2.6",
     "typedoc": "^0.27.9",
-    "typedoc-plugin-markdown": "^4.4.2",
     "typescript": "^5.8.2"
   },
   "lint-staged": {
@@ -78,6 +75,12 @@
       "src/**/*.ts",
       "!src/**/*.d.ts"
     ]
+  },
+  "typedocOptions": {
+    "entryPoints": [
+      "./src"
+    ],
+    "tsconfig": "./tsconfig.build.json"
   },
   "release": {
     "plugins": [

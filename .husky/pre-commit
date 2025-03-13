@@ -1,7 +1,1 @@
-npm run typedoc:md
 npx lint-staged
-# raise if README.md is unstaged
-if git ls-files --others --exclude-standard | grep -q README.md; then
-  echo "README.md is unstaged. Please stage it before commiting."
-  exit 1
-fi
