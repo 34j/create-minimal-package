@@ -13,22 +13,22 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
 ## Features
 
 - The **proof** that the config is ***minimalistic*** is shown below.
-- The main reason some lines of config are needed is because the project structure (`src`, `dist`, `test`) needs to be specified. We denote this reason `☆`.
+- The main reason of the slight complexity is because of the project structure (`src`, `dist`, `test`) needs to be specified, denoted by `☆`.
 
 - 👾Github
-  - [📦🚀semantic-release](https://github.com/semantic-release/semantic-release) & [Commitizen](https://github.com/search?q=commitizen): from [semantic-release を使って Node パッケージのリリースワークフローを自動化する](https://zenn.dev/wakamsha/articles/learn-semantic-release)
-  - [New Issue Templates](https://github.com/34j/create-minimal-package/tree/main/.github/ISSUE_TEMPLATE): from [pypackage-template/.github/ISSUE_TEMPLATE at main · browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template/tree/main/.github/ISSUE_TEMPLATE)
+  - [📦🚀semantic-release](https://github.com/semantic-release/semantic-release) & [Commitizen](https://github.com/search?q=commitizen): from [this article](https://zenn.dev/wakamsha/articles/learn-semantic-release)
+  - [New Issue Templates](https://github.com/34j/create-minimal-package/tree/main/.github/ISSUE_TEMPLATE): from [browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template/tree/main/.github/ISSUE_TEMPLATE)
   - [💨GitHub Actions](https://github.com/34j/create-minimal-package/tree/main/.github/workflows) and [Codecov](https://about.codecov.io/): npm version of [browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template/blob/main/.github/workflows/ci.yml)
 - [⚙TypeScript](https://www.typescriptlang.org/):`tsconfig.json`,`tsconfig.build.json`(w/o tests): inherits [@tsconfig/strictest](https://www.npmjs.com/package/@tsconfig/strictest): 4 lines for `☆`, [3 lines for ES types](https://youtu.be/H91aqUHn8sE?t=148)
 - ✨️Formatting
-  - [🐶Husky](https://github.com/typicode/husky) runs Lint Staged and typedoc
-  - [Lint Staged](https://github.com/okonet/lint-staged) just calls ESLint
-  - [ESLint](https://eslint.org/) config just inherits [@antfu/eslint-config](https://www.npmjs.com/package/@antfu/eslint-config)
+  - [🐶Husky](https://github.com/typicode/husky): runs Lint Staged and typedoc
+  - [Lint Staged](https://github.com/okonet/lint-staged): calls ESLint
+  - [ESLint](https://eslint.org/): inherits [@antfu/eslint-config](https://www.npmjs.com/package/@antfu/eslint-config)
 - ⚠️ Testing
-  - [👢Jest](https://jestjs.io/):`package.json` 2 lines for supporting Codecov and 2 lines for supporting Node.js
+  - [👢Jest](https://jestjs.io/): 2 lines for supporting Codecov and 2 lines for supporting Node.js `P`
 - 📖Documentation
   - [🌐GitHub Pages](https://pages.github.com/)
-  - [📖TypeDoc](https://typedoc.org/):`package.json` 2 lines for `☆`
+  - [📖TypeDoc](https://typedoc.org/): 2 lines for `☆` `P`
   - [🧱Renovate](https://docs.renovatebot.com/): inherits [config:best-practices](https://docs.renovatebot.com/presets-config/#configbest-practices)
 
 <details>
