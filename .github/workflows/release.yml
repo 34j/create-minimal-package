@@ -17,28 +17,28 @@ jobs:
     name: Lint Commit Messages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           fetch-depth: 0
-      - uses: wagoid/commitlint-github-action@v6.0.1
+      - uses: wagoid/commitlint-github-action@7f0a61df502599e1f1f50880aaa7ec1e2c0592f2 # v6.0.1
 
   lint:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - uses: pnpm/action-setup@v4
         with:
           run_install: false
           version: 10
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@1a4442cacd436585916779262731d5b162bc6ec7 # v3
         with:
           node-version: lts/*
       - id: pnpm-cache-path
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
       - name: pnpm cache
-        uses: actions/cache@v3
+        uses: actions/cache@2f8e54208210a422b2efd51efaa6bd6d7ca8920f # v3
         with:
           path: ${{ steps.pnpm-cache-path.outputs.STORE_PATH }}
           key: lint-${{ runner.os }}-${{ steps.setup-node.outputs.node-version }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -46,8 +46,8 @@ jobs:
             lint-${{ runner.os }}-${{ steps.setup-node.outputs.node-version }}-pnpm-store-
       - name: Install dependencies
         run: pnpm install
-      - uses: pre-commit/action@v3.0.1
-      - uses: pre-commit-ci/lite-action@v1.1.0
+      - uses: pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd # v3.0.1
+      - uses: pre-commit-ci/lite-action@5d6cc0eb514c891a40562a58a8e71576c5c7fb43 # v1.1.0
         if: always()
 
   test:
@@ -56,19 +56,19 @@ jobs:
       matrix:
         node-version: [18, 20, 22]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - uses: pnpm/action-setup@v4
         with:
           run_install: false
           version: 10
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@1a4442cacd436585916779262731d5b162bc6ec7 # v3
         with:
           node-version: ${{ matrix.node-version }}
       - id: pnpm-cache-path
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
       - name: pnpm cache
-        uses: actions/cache@v3
+        uses: actions/cache@2f8e54208210a422b2efd51efaa6bd6d7ca8920f # v3
         with:
           path: ${{ steps.pnpm-cache-path.outputs.STORE_PATH }}
           key: test-${{ runner.os }}-${{ steps.setup-node.outputs.node-version }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -83,7 +83,7 @@ jobs:
       - name: Test
         run: pnpm test
       - name: Upload Code Coverage
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@0565863a31f2c772f9f0395002a31e3f06189574 # v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
@@ -105,21 +105,21 @@ jobs:
       id-token: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           fetch-depth: 0
       - uses: pnpm/action-setup@v4
         with:
           run_install: false
           version: 10
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@1a4442cacd436585916779262731d5b162bc6ec7 # v3
         with:
           node-version: lts/*
       - id: pnpm-cache-path
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
       - name: pnpm cache
-        uses: actions/cache@v3
+        uses: actions/cache@2f8e54208210a422b2efd51efaa6bd6d7ca8920f # v3
         with:
           path: ${{ steps.pnpm-cache-path.outputs.STORE_PATH }}
           key: release-${{ runner.os }}-${{ steps.setup-node.outputs.node-version }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -138,10 +138,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Upload Documentation
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
           path: docs
       - name: Deploy Documentation to GitHub Pages
         if: github.ref_name == 'main'
         id: deployment
-        uses: actions/deploy-pages@v4.0.4
+        uses: actions/deploy-pages@decdde0ac072f6dcbe43649d82d9c635fff5b4e4 # v4.0.4
