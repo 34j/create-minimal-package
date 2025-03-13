@@ -13,7 +13,7 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
 ## Features
 
 - The **proof** that the config is ***minimalistic*** is shown below.
-- The main reason of the slight complexity is because of the project structure (`src`, `dist`, `test`) needs to be specified, denoted by `☆`.
+- The main reason (`☆`) of the slight complexity is the need to specify the project structure (`src`, `dist`, `test`).
 
 - 👾Github
   - [📦🚀semantic-release](https://github.com/semantic-release/semantic-release) & [Commitizen](https://github.com/search?q=commitizen): from [this article](https://zenn.dev/wakamsha/articles/learn-semantic-release)
