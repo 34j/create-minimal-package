@@ -6,7 +6,9 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
 
 **Docs Demo**: [https://34j.github.io/create-minimal-package/](https://34j.github.io/create-minimal-package/)
 
-**Package Demo**: [https://www.npmjs.com/package/create-minimal-package](https://www.npmjs.com/package/create-minimal-package)
+**NPM Package Demo**: [https://www.npmjs.com/package/create-minimal-package](https://www.npmjs.com/package/create-minimal-package)
+
+**Source Code**: [https://github.com/34j/create-minimal-package](https://github.com/34j/create-minimal-package)
 
 ---
 
@@ -75,9 +77,9 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
 
 **Documentation**: [https://34j.github.io/create-minimal-package/](https://34j.github.io/create-minimal-package/)
 
-**Source Code**: [https://github.com/34j/create-minimal-package](https://github.com/34j/create-minimal-package)
+**NPM Package**: [https://www.npmjs.com/package/create-minimal-package](https://www.npmjs.com/package/create-minimal-package)
 
-**Package**: [https://www.npmjs.com/package/create-minimal-package](https://www.npmjs.com/package/create-minimal-package)
+**Source Code**: [https://github.com/34j/create-minimal-package](https://github.com/34j/create-minimal-package)
 
 ---
 
