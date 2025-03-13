@@ -34,7 +34,16 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: lts/*
-          cache: pnpm
+      - id: pnpm-cache-path
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+      - name: pnpm cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache-path.outputs.STORE_PATH }}
+          key: lint-${{ runner.os }}-${{ steps.setup-node.outputs.node-version }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            lint-${{ runner.os }}-${{ steps.setup-node.outputs.node-version }}-pnpm-store-
       - name: Install dependencies
         run: pnpm install
       - uses: pre-commit/action@v3.0.1
@@ -55,7 +64,16 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: pnpm
+      - id: pnpm-cache-path
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+      - name: pnpm cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache-path.outputs.STORE_PATH }}
+          key: test-${{ runner.os }}-${{ steps.setup-node.outputs.node-version }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            test-${{ runner.os }}-${{ steps.setup-node.outputs.node-version }}-pnpm-store-
       - name: Install dependencies
         run: pnpm install
       - name: Build
@@ -97,7 +115,16 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: lts/*
-          cache: pnpm
+      - id: pnpm-cache-path
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+      - name: pnpm cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache-path.outputs.STORE_PATH }}
+          key: release-${{ runner.os }}-${{ steps.setup-node.outputs.node-version }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            release-${{ runner.os }}-${{ steps.setup-node.outputs.node-version }}-pnpm-store-
       - name: Install dependencies
         run: pnpm install
       - name: Build
