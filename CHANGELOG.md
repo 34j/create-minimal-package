@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/34j/create-minimal-package/compare/v1.1.0...v1.1.1) (2025-03-13)
+
+
+### Bug Fixes
+
+* fix eslint not working ([035bec2](https://github.com/34j/create-minimal-package/commit/035bec298bfc17c7aba0a52dfc885c235c650503))
+
 # [1.1.0](https://github.com/34j/create-minimal-package/compare/v1.0.0...v1.1.0) (2025-03-13)
 
 
