@@ -24,8 +24,10 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
   - [🧱Renovate](https://docs.renovatebot.com/): inherits [config:best-practices](https://docs.renovatebot.com/presets-config/#configbest-practices)
 - [⚙TypeScript](https://www.typescriptlang.org/):`tsconfig.json`: inherits [@tsconfig/strictest](https://www.npmjs.com/package/@tsconfig/strictest): 4 lines for `☆`, [3 lines for ES types](https://youtu.be/H91aqUHn8sE?t=148)
 - ✨️Formatting
-  - [⚠️Pre-commit](https://pre-commit.com/) and [pre-commit.ci](https://pre-commit.ci/): from [browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template/tree/main/.github/ISSUE_TEMPLATE) + [mirrors-eslint](https://github.com/pre-commit/mirrors-eslint) (⏪️[🐶Husky](https://github.com/typicode/husky) + [Lint Staged](https://github.com/okonet/lint-staged) for better CI support)
+  - [⚠️pre-commit](https://pre-commit.com/) and [pre-commit.ci](https://pre-commit.ci/): from [browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template/tree/main/.github/ISSUE_TEMPLATE) + [mirrors-eslint](https://github.com/pre-commit/mirrors-eslint) (⏪️[🐶Husky](https://github.com/typicode/husky) + [Lint Staged](https://github.com/okonet/lint-staged) for better CI support)
   - [ESLint](https://eslint.org/): inherits [@antfu/eslint-config](https://www.npmjs.com/package/@antfu/eslint-config)
+- 📦Packageing
+  - [pnpm](https://pnpm.io/) (⏪️npm)
 - ⚠️ Testing
   - [⚡️Vitest](https://vitest.dev/) (⏪️[👢Jest](https://jestjs.io/)): 0 lines
 - 📖Documentation

@@ -26,16 +26,19 @@
 <!--
   Please make sure to review and check all of the following.
 
+  Note that there is no problem if they are not checked when this PR is created.
+
   If an item is not applicable, you can add "N/A" to the end.
 -->
 
 - [ ] Code is up-to-date with the `main` branch
-- [ ] `npm run lint` passes with this change
-- [ ] `npm run test` passes with this change
 - [ ] This pull request links relevant issues as `Fixes #0000`
 - [ ] There are new or updated unit tests validating the change
 - [ ] Documentation has been updated to reflect this change
-- [ ] The new commits follow conventions outlined in the [conventional commit spec](https://www.conventionalcommits.org/en/v1.0.0/)
+- [ ] The new commits follow conventions outlined in the [conventional commit spec](https://www.conventionalcommits.org/en/v1.0.0/), such as "fix(api): prevent racing of requests".
+
+> - If pre-commit.ci is failing, try `pre-commit run -a` for further information.
+> - If CI / test is failing, try `pnpm test` for further information.
 
 <!--
   🎉 Thank you for contributing!
