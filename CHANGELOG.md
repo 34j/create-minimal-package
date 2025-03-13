@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/34j/create-minimal-package/compare/v1.3.0...v1.3.1) (2025-03-13)
+
+
+### Bug Fixes
+
+* fix pnpm cache ([5690e42](https://github.com/34j/create-minimal-package/commit/5690e426475da41beba8f8e30f9927d0b1b68885))
+
 # [1.3.0](https://github.com/34j/create-minimal-package/compare/v1.2.0...v1.3.0) (2025-03-13)
 
 
