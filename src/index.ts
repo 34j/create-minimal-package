@@ -3,9 +3,9 @@
  *
  * ---
  *
- * **Docs Demo**: [https://34j.github.io/npm-package-template/](https://34j.github.io/npm-package-template/)
+ * **Docs Demo**: [https://34j.github.io/create-minimal-package/](https://34j.github.io/create-minimal-package/)
  *
- * **Package Demo**: [https://www.npmjs.com/package/npm-package-template](https://www.npmjs.com/package/npm-package-template)
+ * **Package Demo**: [https://www.npmjs.com/package/create-minimal-package](https://www.npmjs.com/package/create-minimal-package)
  *
  * ---
  *
@@ -16,8 +16,8 @@
  *
  * - 👾Github
  *   - [📦🚀semantic-release](https://github.com/semantic-release/semantic-release) config with [Commitizen](https://github.com/search?q=commitizen) support from [semantic-release を使って Node パッケージのリリースワークフローを自動化する](https://zenn.dev/wakamsha/articles/learn-semantic-release)
- *   - [New Issue Templates](https://github.com/34j/npm-package-template/tree/main/.github/ISSUE_TEMPLATE) from [pypackage-template/.github/ISSUE_TEMPLATE at main · browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template/tree/main/.github/ISSUE_TEMPLATE)
- *   - [💨GitHub Actions](https://github.com/34j/npm-package-template/tree/main/.github/workflows) and [Codecov](https://about.codecov.io/) config is npm version of [pypackage-template/.github/workflows/ci.yml at main · browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template/blob/main/.github/workflows/ci.yml)
+ *   - [New Issue Templates](https://github.com/34j/create-minimal-package/tree/main/.github/ISSUE_TEMPLATE) from [pypackage-template/.github/ISSUE_TEMPLATE at main · browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template/tree/main/.github/ISSUE_TEMPLATE)
+ *   - [💨GitHub Actions](https://github.com/34j/create-minimal-package/tree/main/.github/workflows) and [Codecov](https://about.codecov.io/) config is npm version of [pypackage-template/.github/workflows/ci.yml at main · browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template/blob/main/.github/workflows/ci.yml)
  * - ⚙[TypeScript](https://www.typescriptlang.org/) config inherits [@tsconfig/strictest](https://www.npmjs.com/package/@tsconfig/strictest) with minimal project-specific modifications (src/dist naming) [suggested by Fireship](https://www.npmjs.com/package/@tsconfig/strictest)
  * - ✨️Formatting
  *   - [🐶Husky](https://github.com/typicode/husky) runs Lint Staged and typedoc
@@ -48,7 +48,7 @@
  *   FULL_NAME="John Smith"
  *   GITHUB_USER="johnsmith"
  *   REPO_NAME="my-cool-package"
- *   sed -i.mybak "s/\([^@]\)34j/\1$GITHUB_USER/g; s/npm-package-template\|my-package-name/$REPO_NAME/g; s/Ryan Sonshine/$FULL_NAME/g" package.json package-lock.json src/index.ts
+ *   sed -i.mybak "s/\([^@]\)34j/\1$GITHUB_USER/g; s/create-minimal-package\|my-package-name/$REPO_NAME/g; s/Ryan Sonshine/$FULL_NAME/g" package.json package-lock.json src/index.ts
  *   rm *.mybak
  *   ```
  * 3. Add your npm token to your GitHub repository secrets as `NPM_TOKEN`.
@@ -59,7 +59,7 @@
  *
  * ---
  *
- * # npm-package-template
+ * # create-minimal-package
  *
  * [![npm package][npm-img]][npm-url]
  * [![Build Status][build-img]][build-url]
@@ -71,11 +71,11 @@
  *
  * ---
  *
- * **Documentation**: [https://34j.github.io/npm-package-template/](https://34j.github.io/npm-package-template/)
+ * **Documentation**: [https://34j.github.io/create-minimal-package/](https://34j.github.io/create-minimal-package/)
  *
- * **Source Code**: [https://github.com/34j/npm-package-template](https://github.com/34j/npm-package-template)
+ * **Source Code**: [https://github.com/34j/create-minimal-package](https://github.com/34j/create-minimal-package)
  *
- * **Package**: [https://www.npmjs.com/package/npm-package-template](https://www.npmjs.com/package/npm-package-template)
+ * **Package**: [https://www.npmjs.com/package/create-minimal-package](https://www.npmjs.com/package/create-minimal-package)
  *
  * ---
  *
@@ -84,28 +84,28 @@
  * ## Installation
  *
  * ```bash
- * npm install npm-package-template
+ * npm install create-minimal-package
  * ```
  *
  * ## Usage
  *
  * ```ts
- * import { myPackage } from 'npm-package-template';
+ * import { myPackage } from 'create-minimal-package';
  *
  * myPackage('hello');
  * //=> 'hello from my package'
  * ```
  *
- * [build-img]:https://github.com/34j/npm-package-template/actions/workflows/release.yml/badge.svg
- * [build-url]:https://github.com/34j/npm-package-template/actions/workflows/release.yml
- * [downloads-img]:https://img.shields.io/npm/dt/npm-package-template
- * [downloads-url]:https://www.npmtrends.com/npm-package-template
- * [npm-img]:https://img.shields.io/npm/v/npm-package-template
- * [npm-url]:https://www.npmjs.com/package/npm-package-template
- * [issues-img]:https://img.shields.io/github/issues/34j/npm-package-template
- * [issues-url]:https://github.com/34j/npm-package-template/issues
- * [codecov-img]:https://codecov.io/gh/34j/npm-package-template/branch/main/graph/badge.svg
- * [codecov-url]:https://codecov.io/gh/34j/npm-package-template
+ * [build-img]:https://github.com/34j/create-minimal-package/actions/workflows/release.yml/badge.svg
+ * [build-url]:https://github.com/34j/create-minimal-package/actions/workflows/release.yml
+ * [downloads-img]:https://img.shields.io/npm/dt/create-minimal-package
+ * [downloads-url]:https://www.npmtrends.com/create-minimal-package
+ * [npm-img]:https://img.shields.io/npm/v/create-minimal-package
+ * [npm-url]:https://www.npmjs.com/package/create-minimal-package
+ * [issues-img]:https://img.shields.io/github/issues/34j/create-minimal-package
+ * [issues-url]:https://github.com/34j/create-minimal-package/issues
+ * [codecov-img]:https://codecov.io/gh/34j/create-minimal-package/branch/main/graph/badge.svg
+ * [codecov-url]:https://codecov.io/gh/34j/create-minimal-package
  * [semantic-release-img]:https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
  * [semantic-release-url]:https://github.com/semantic-release/semantic-release
  * [commitizen-img]:https://img.shields.io/badge/commitizen-friendly-brightgreen.svg

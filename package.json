@@ -1,5 +1,5 @@
 {
-  "name": "npm-package-template",
+  "name": "create-minimal-package",
   "type": "commonjs",
   "version": "0.0.0-development",
   "description": "A template for creating npm packages using TypeScript. Note that this is a generated sample package.",
@@ -7,13 +7,13 @@
     "name": "34j"
   },
   "license": "MIT",
-  "homepage": "https://github.com/34j/npm-package-template",
+  "homepage": "https://github.com/34j/create-minimal-package",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/34j/npm-package-template.git"
+    "url": "git+https://github.com/34j/create-minimal-package.git"
   },
   "bugs": {
-    "url": "https://github.com/34j/npm-package-template/issues"
+    "url": "https://github.com/34j/create-minimal-package/issues"
   },
   "keywords": [
     "boilerplate",
