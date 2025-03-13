@@ -9,49 +9,49 @@ importers:
   .:
     devDependencies:
       '@antfu/eslint-config':
-        specifier: ^4.8.1
+        specifier: 4.10.1
         version: 4.10.1(@typescript-eslint/utils@8.26.1(eslint@9.22.0)(typescript@5.8.2))(@vue/compiler-sfc@3.5.13)(eslint@9.22.0)(typescript@5.8.2)(vitest@3.0.8(@types/debug@4.1.12)(@types/node@22.13.10)(yaml@2.7.0))
       '@semantic-release/changelog':
-        specifier: ^6.0.3
+        specifier: 6.0.3
         version: 6.0.3(semantic-release@24.2.3(typescript@5.8.2))
       '@semantic-release/git':
-        specifier: ^10.0.1
+        specifier: 10.0.1
         version: 10.0.1(semantic-release@24.2.3(typescript@5.8.2))
       '@tsconfig/strictest':
-        specifier: ^2.0.5
+        specifier: 2.0.5
         version: 2.0.5
       '@types/node':
-        specifier: ^22.13.10
+        specifier: 22.13.10
         version: 22.13.10
       '@typescript-eslint/eslint-plugin':
-        specifier: ^8.26.1
+        specifier: 8.26.1
         version: 8.26.1(@typescript-eslint/parser@8.26.1(eslint@9.22.0)(typescript@5.8.2))(eslint@9.22.0)(typescript@5.8.2)
       '@vitest/coverage-v8':
-        specifier: ^3.0.8
+        specifier: 3.0.8
         version: 3.0.8(vitest@3.0.8(@types/debug@4.1.12)(@types/node@22.13.10)(yaml@2.7.0))
       eslint:
-        specifier: ^9.22.0
+        specifier: 9.22.0
         version: 9.22.0
       globals:
-        specifier: ^16.0.0
+        specifier: 16.0.0
         version: 16.0.0
       npm-check-updates:
-        specifier: ^17.1.15
+        specifier: 17.1.15
         version: 17.1.15
       npm-run-all2:
         specifier: 5.0.0
         version: 5.0.0
       semantic-release:
-        specifier: ^24.2.3
+        specifier: 24.2.3
         version: 24.2.3(typescript@5.8.2)
       typedoc:
-        specifier: ^0.27.9
+        specifier: 0.27.9
         version: 0.27.9(typescript@5.8.2)
       typescript:
-        specifier: ^5.8.2
+        specifier: 5.8.2
         version: 5.8.2
       vitest:
-        specifier: ^3.0.8
+        specifier: 3.0.8
         version: 3.0.8(@types/debug@4.1.12)(@types/node@22.13.10)(yaml@2.7.0)
 
 packages:
