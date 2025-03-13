@@ -20,12 +20,12 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
   - [New Issue Templates](https://github.com/34j/create-minimal-package/tree/main/.github/ISSUE_TEMPLATE): from [browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template/tree/main/.github/ISSUE_TEMPLATE)
   - [💨GitHub Actions](https://github.com/34j/create-minimal-package/tree/main/.github/workflows) + [📊Codecov](https://about.codecov.io/): npm version of [browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template/blob/main/.github/workflows/ci.yml)
   - [🧱Renovate](https://docs.renovatebot.com/): inherits [config:best-practices](https://docs.renovatebot.com/presets-config/#configbest-practices)
-- [⚙TypeScript](https://www.typescriptlang.org/):`tsconfig.json`,`tsconfig.build.json`(w/o tests): inherits [@tsconfig/strictest](https://www.npmjs.com/package/@tsconfig/strictest): 4 lines for `☆`, [3 lines for ES types](https://youtu.be/H91aqUHn8sE?t=148)
+- [⚙TypeScript](https://www.typescriptlang.org/):`tsconfig.json`: inherits [@tsconfig/strictest](https://www.npmjs.com/package/@tsconfig/strictest): 4 lines for `☆`, [3 lines for ES types](https://youtu.be/H91aqUHn8sE?t=148)
 - ✨️Formatting
-  - [⚠️Pre-commit](https://pre-commit.com/) and [pre-commit.ci](https://pre-commit.ci/): from [browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template/tree/main/.github/ISSUE_TEMPLATE) + [mirrors-eslint](https://github.com/pre-commit/mirrors-eslint) instead of [🐶Husky](https://github.com/typicode/husky) + [Lint Staged](https://github.com/okonet/lint-staged) for better CI support
+  - [⚠️Pre-commit](https://pre-commit.com/) and [pre-commit.ci](https://pre-commit.ci/): from [browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template/tree/main/.github/ISSUE_TEMPLATE) + [mirrors-eslint](https://github.com/pre-commit/mirrors-eslint) (⏪️[🐶Husky](https://github.com/typicode/husky) + [Lint Staged](https://github.com/okonet/lint-staged) for better CI support)
   - [ESLint](https://eslint.org/): inherits [@antfu/eslint-config](https://www.npmjs.com/package/@antfu/eslint-config)
 - ⚠️ Testing
-  - [👢Jest](https://jestjs.io/): 2 lines for supporting Codecov and 2 lines for supporting Node.js `P`
+  - [⚡️Vitest](https://vitest.dev/) (⏪️[👢Jest](https://jestjs.io/)): 0 lines
 - 📖Documentation
   - [🌐GitHub Pages](https://pages.github.com/)
   - [📖TypeDoc](https://typedoc.org/): 2 lines for `☆` `P`
@@ -39,18 +39,17 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
 
 </details>
 
-## Getting started
-
-### Set up your repository
+## Quickstart
 
 1. **Click the "Use this template" button.**
 2. Replace `FULL_NAME`, `GITHUB_USER`, and `REPO_NAME` using `sed`:
   ```bash
-  FULL_NAME="John Smith"
   GITHUB_USER="johnsmith"
   REPO_NAME="my-cool-package"
-  sed -i.mybak "s/\([^@]\)34j/\1$GITHUB_USER/g; s/create-minimal-package\|my-package-name/$REPO_NAME/g; s/Ryan Sonshine/$FULL_NAME/g" package.json package-lock.json src/index.ts
-  rm *.mybak
+  sed -i.tmp "s/\([^@]\)34j/\1$GITHUB_USER/g; s/create-minimal-package\|my-package-name/$REPO_NAME/g; package.json package-lock.json src/index.ts
+  sed -i.tmp 's/"version": "[0-9.]*"/"version": "0.0.0"/' package.json
+  rm *.tmp
+  rm CHANGELOG.md
   ```
 3. Add `NPM_TOKEN` to `Settings/Secrets and variables/Actions/Repository secrets`.
 4. Add `CODECOV_TOKEN` to `Settings/Secrets and variables/Actions/Repository secrets`.
