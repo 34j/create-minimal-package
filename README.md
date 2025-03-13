@@ -22,8 +22,7 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
   - [🧱Renovate](https://docs.renovatebot.com/): inherits [config:best-practices](https://docs.renovatebot.com/presets-config/#configbest-practices)
 - [⚙TypeScript](https://www.typescriptlang.org/):`tsconfig.json`,`tsconfig.build.json`(w/o tests): inherits [@tsconfig/strictest](https://www.npmjs.com/package/@tsconfig/strictest): 4 lines for `☆`, [3 lines for ES types](https://youtu.be/H91aqUHn8sE?t=148)
 - ✨️Formatting
-  - [🐶Husky](https://github.com/typicode/husky): runs Lint Staged and typedoc
-  - [Lint Staged](https://github.com/okonet/lint-staged): calls ESLint
+  - [⚠️Pre-commit](https://pre-commit.com/) and [pre-commit.ci](https://pre-commit.ci/): from [browniebroke/pypackage-template](https://github.com/browniebroke/pypackage-template/tree/main/.github/ISSUE_TEMPLATE) + [mirrors-eslint](https://github.com/pre-commit/mirrors-eslint) instead of [🐶Husky](https://github.com/typicode/husky) + [Lint Staged](https://github.com/okonet/lint-staged)
   - [ESLint](https://eslint.org/): inherits [@antfu/eslint-config](https://www.npmjs.com/package/@antfu/eslint-config)
 - ⚠️ Testing
   - [👢Jest](https://jestjs.io/): 2 lines for supporting Codecov and 2 lines for supporting Node.js `P`
@@ -53,7 +52,9 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
   ```
 3. Add `NPM_TOKEN` to `Settings/Secrets and variables/Actions/Repository secrets`.
 4. Enable [Codecov GitHub App](https://github.com/apps/codecov) and add `CODECOV_TOKEN` to `Settings/Secrets and variables/Actions/Repository secrets`.
-5. Remove everything above `---`.
+5. Install GitHub Apps, [pre-commit.ci](https://github.com/apps/pre-commit-ci) and [Codecov](https://github.com/apps/codecov).
+6. Install [pre-commit](https://pre-commit.com/) using [`uv`](https://github.com/astral-sh/uv); `uv tool install pre-commit`.
+7. Remove everything above `---`.
 
 > Inspired by [node-module-boilerplate](https://github.com/sindresorhus/node-module-boilerplate) and [typescript-npm-package-template](https://github.com/Atry/typescript-npm-package-template/tree/main), which is great but unnecessarily complex and poorly maintained.
 

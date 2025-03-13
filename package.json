@@ -2,7 +2,7 @@
   "name": "create-minimal-package",
   "type": "commonjs",
   "version": "1.0.0",
-  "description": "Minimalistic npm package template with 📦🚀semantic-release + Commitizen, CodeCov, Renovate, 🐶Husky + Lint Staged + EsLint, 👢Jest, 📖TypeDoc + Github Pages support. Note that this is a generated sample package.",
+  "description": "Minimalistic npm package template with 📦🚀semantic-release + Commitizen, CodeCov, Renovate, 🐶Husky + pre-commit (✗Lint Staged + EsLint), 👢Jest, 📖TypeDoc + Github Pages support. Note that this is a generated sample package.",
   "author": {
     "name": "34j"
   },
@@ -36,7 +36,7 @@
     "build:watch": "tsc --watch --project tsconfig.build.json",
     "build": "tsc --project tsconfig.build.json",
     "lint": "eslint --fix",
-    "prepare": "husky",
+    "prepare": "pre-commit install",
     "typedoc": "typedoc",
     "typedoc:watch": "typedoc --watch",
     "test:watch": "jest --watch",
@@ -54,18 +54,13 @@
     "@typescript-eslint/eslint-plugin": "^8.26.1",
     "eslint": "^9.22.0",
     "globals": "^16.0.0",
-    "husky": "^9.1.7",
     "jest": "^29.7.0",
-    "lint-staged": "^15.4.3",
     "npm-check-updates": "^17.1.15",
     "npm-run-all2": "5.0.0",
     "semantic-release": "^24.2.3",
     "ts-jest": "^29.2.6",
     "typedoc": "^0.27.9",
     "typescript": "^5.8.2"
-  },
-  "lint-staged": {
-    "*": "eslint --fix"
   },
   "jest": {
     "preset": "ts-jest",
