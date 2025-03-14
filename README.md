@@ -45,8 +45,8 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
 
 ## Quickstart
 
-1. **Click the "Use this template" button.**
-2. Replace `FULL_NAME`, `GITHUB_USER`, and `REPO_NAME` using `sed`:
+1. Click the "Use this template" button.
+2. Replace `GITHUB_USER` and `REPO_NAME` using `sed`:
   ```bash
   GITHUB_USER="johnsmith"
   REPO_NAME="my-cool-package"
@@ -55,10 +55,10 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
   rm *.tmp
   rm CHANGELOG.md
   ```
-3. Add `NPM_TOKEN` to `Settings/Secrets and variables/Actions/Repository secrets`.
-4. Add `CODECOV_TOKEN` to `Settings/Secrets and variables/Actions/Repository secrets`.
+3. [Create](https://www.npmjs.com/) and add `NPM_TOKEN` to `Settings/Secrets and variables/Actions/Repository secrets`.
+4. [Create][codecov-url] and add `CODECOV_TOKEN` to `Settings/Secrets and variables/Actions/Repository secrets`.
 5. Install GitHub Apps, [pre-commit.ci lite](https://github.com/apps/pre-commit-ci-lite/installations/select_target) and [Codecov](https://github.com/apps/codecov/installations/select_target).
-6. Install [pre-commit](https://pre-commit.com/) using [`uv`](https://github.com/astral-sh/uv) and install hooks by `uv tool install pre-commit && pre-commit install`.
+6. Install [pre-commit](https://pre-commit.com/) using [`uv`](https://github.com/astral-sh/uv) by `uv tool install pre-commit` and install hooks by `pre-commit install`.
 7. Remove everything above `---`.
 
 > Inspired by [node-module-boilerplate](https://github.com/sindresorhus/node-module-boilerplate) and [typescript-npm-package-template](https://github.com/Atry/typescript-npm-package-template/tree/main), which is great but unnecessarily complex and poorly maintained.
