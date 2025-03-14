@@ -6,10 +6,6 @@ on:
       - main
   pull_request:
 
-concurrency:
-  group: ${{ github.head_ref || github.run_id }}
-  cancel-in-progress: true
-
 jobs:
   # Make sure commit messages follow the conventional commits convention:
   # https://www.conventionalcommits.org
@@ -95,7 +91,6 @@ jobs:
       name: release
       # Pages
       url: ${{ steps.deployment.outputs.url }}
-    concurrency: release
     permissions:
       contents: write
       issues: write
@@ -108,6 +103,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           fetch-depth: 0
+          ref: ${{ github.sha }}
       - uses: pnpm/action-setup@v4
         with:
           run_install: false
@@ -132,11 +128,11 @@ jobs:
       - name: Docs
         run: pnpm typedoc
       - name: Release
-        if: github.ref_name == 'main'
         uses: cycjimmy/semantic-release-action@v4
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        with:
+          dry_run: ${{ github.ref_name != 'main' }}
       - name: Upload Documentation
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
