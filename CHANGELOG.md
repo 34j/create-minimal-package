@@ -1,3 +1,11 @@
+## [1.3.2](https://github.com/34j/create-minimal-package/compare/v1.3.1...v1.3.2) (2025-03-14)
+
+
+### Bug Fixes
+
+* remove concurrency ([4d11452](https://github.com/34j/create-minimal-package/commit/4d1145262119f1a97354b4a02a3ee1c753c070e2))
+* remove concurrency ([5478f51](https://github.com/34j/create-minimal-package/commit/5478f519264a3e21b9cb43e1881d2036ececcc36))
+
 ## [1.3.1](https://github.com/34j/create-minimal-package/compare/v1.3.0...v1.3.1) (2025-03-13)
 
 
