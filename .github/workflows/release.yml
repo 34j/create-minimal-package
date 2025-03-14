@@ -34,7 +34,7 @@ jobs:
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
       - name: pnpm cache
-        uses: actions/cache@2f8e54208210a422b2efd51efaa6bd6d7ca8920f # v3
+        uses: actions/cache@d4323d4df104b026a6aa633fdb11d772146be0bf # v4
         with:
           path: ${{ steps.pnpm-cache-path.outputs.STORE_PATH }}
           key: lint-${{ runner.os }}-${{ steps.setup-node.outputs.node-version }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -64,7 +64,7 @@ jobs:
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
       - name: pnpm cache
-        uses: actions/cache@2f8e54208210a422b2efd51efaa6bd6d7ca8920f # v3
+        uses: actions/cache@d4323d4df104b026a6aa633fdb11d772146be0bf # v4
         with:
           path: ${{ steps.pnpm-cache-path.outputs.STORE_PATH }}
           key: test-${{ runner.os }}-${{ steps.setup-node.outputs.node-version }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -115,7 +115,7 @@ jobs:
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
       - name: pnpm cache
-        uses: actions/cache@2f8e54208210a422b2efd51efaa6bd6d7ca8920f # v3
+        uses: actions/cache@d4323d4df104b026a6aa633fdb11d772146be0bf # v4
         with:
           path: ${{ steps.pnpm-cache-path.outputs.STORE_PATH }}
           key: release-${{ runner.os }}-${{ steps.setup-node.outputs.node-version }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
