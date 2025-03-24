@@ -48,7 +48,7 @@
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@tsconfig/strictest": "2.0.5",
-    "@types/node": "22.13.12",
+    "@types/node": "22.13.13",
     "@typescript-eslint/eslint-plugin": "8.27.0",
     "@vitest/coverage-v8": "3.0.9",
     "eslint": "9.23.0",
