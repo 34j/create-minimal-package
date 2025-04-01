@@ -36,3 +36,7 @@ repos:
         entry: eslint --fix
         files: ''
         types: [file]
+  - repo: https://github.com/NixOS/nixfmt
+    rev: e825e95
+    hooks:
+      - id: nixfmt
