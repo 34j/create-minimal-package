@@ -37,6 +37,6 @@ repos:
         files: ''
         types: [file]
   - repo: https://github.com/NixOS/nixfmt
-    rev: e825e95
+    rev: '3006577'
     hooks:
       - id: nixfmt
