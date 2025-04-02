@@ -51,9 +51,10 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
   ```bash
   GITHUB_USER="johnsmith"
   REPO_NAME="my-cool-package"
-  sed -i.tmp "s/\([^@]\)34j/\1$GITHUB_USER/g; s/create-minimal-package\|my-package-name/$REPO_NAME/g;" package.json package-lock.json src/index.ts
+  sed -i.tmp "s/\([^@]\)34j/\1$GITHUB_USER/g; s/create-minimal-package\|my-package-name/$REPO_NAME/g;" package.json src/index.ts README.md
   sed -i.tmp 's/"version": "[0-9.]*"/"version": "0.0.0"/' package.json
   rm *.tmp
+  rm src/*.tmp
   rm CHANGELOG.md
   ```
 3. [Create](https://www.npmjs.com/settings/34j/tokens/) and add `NPM_TOKEN` to [`Settings/Secrets and variables/Actions/Repository secrets`](https://github.com/34j/create-minimal-package/settings/secrets/actions).
