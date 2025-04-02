@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/34j/create-minimal-package/compare/v1.3.2...v1.4.0) (2025-04-02)
+
+
+### Features
+
+* add browser tests ([23d47cb](https://github.com/34j/create-minimal-package/commit/23d47cb74559c00aa7f5f4447c99b38634388b69))
+* test with firefox as well ([577739d](https://github.com/34j/create-minimal-package/commit/577739dd205d69263b81d4abf48659799fd1578a))
+
 ## [1.3.2](https://github.com/34j/create-minimal-package/compare/v1.3.1...v1.3.2) (2025-03-14)
 
 
