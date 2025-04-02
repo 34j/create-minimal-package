@@ -2,12 +2,13 @@ import { defineWorkspace } from 'vitest/config'
 
 export default defineWorkspace([
   {
+    // node test config
     test: {
       name: 'node',
-      environment: 'node',
     },
   },
   {
+    // browser test config
     test: {
       name: 'browser',
       browser: {

@@ -18,12 +18,14 @@
             targetPkgs =
               pkgs:
               [
+                # playwright (firefox) dependencies
                 (pkgs.runCommand "steamrun-lib" { }
                   "mkdir $out; ln -s ${pkgs.steam-run-free.fhsenv}/usr/lib64 $out/lib"
                 )
               ]
               ++ (with pkgs; [
-                # playwright dependencies
+                # playwright (chromium) dependencies
+                # https://zenn.dev/link/comments/d456595abd7aea
                 openssl
                 systemd
                 glib
@@ -47,6 +49,8 @@
                 cairo
                 nspr
                 libgbm
+              ])
+              ++ (with pkgs; [
                 # project dependencies
                 pnpm
                 nodejs

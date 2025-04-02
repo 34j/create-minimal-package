@@ -33,10 +33,15 @@ repos:
     rev: v9.22.0
     hooks:
       - id: eslint
-        entry: eslint --fix
+        entry: eslint --fix --no-warn-ignored
         files: ''
         types: [file]
   - repo: https://github.com/NixOS/nixfmt
     rev: '3006577'
     hooks:
       - id: nixfmt
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.4.1
+    hooks:
+      - id: codespell
+        exclude: pnpm-lock.yaml

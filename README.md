@@ -29,16 +29,17 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
 - 📦Packageing
   - [pnpm](https://pnpm.io/) (⏪️npm)
 - ⚠️ Testing
-  - [⚡️Vitest](https://vitest.dev/) (⏪️[👢Jest](https://jestjs.io/)): 0 lines
+  - [⚡️Vitest](https://vitest.dev/) (⏪️[👢Jest](https://jestjs.io/)): several lines for browser testing
 - 📖Documentation
   - [🌐GitHub Pages](https://pages.github.com/)
   - [📖TypeDoc](https://typedoc.org/): 2 lines for `☆` `P`
+- ❄Nix Support (Optional, only needed for Nix users)
+  - [❄`nix develop --ignore-environment`](https://nix.dev/manual/nix/latest/command-ref/new-cli/nix3-develop): many lines for Playwright support
 
 <details>
 <summary>Removed Features (to achieve minimalism)</summary>
 
 - Removed Commitizen integration and VS Code stuff (from [ryansonshine/typescript-npm-package-template](https://github.com/ryansonshine/typescript-npm-package-template)) because it's not maintained and complex. Commitizen can be still used (Semantic Release supports it natively).
-- Removed Nix stuff and typedoc-plugin-markdown (from [typescript-npm-package-template](https://github.com/Atry/typescript-npm-package-template/tree/main)) because it's not necessary.
 - Removed Prettier due to [@antfu/eslint-config's opinions](https://github.com/antfu/eslint-config?tab=readme-ov-file#prettier) and [mirrors-prettier](https://github.com/pre-commit/mirrors-prettier) being archived.
 
 </details>
