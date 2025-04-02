@@ -16,7 +16,13 @@
           (pkgs.buildFHSEnv {
             name = "playwright";
             targetPkgs =
-              pkgs: with pkgs; [
+              pkgs:
+              [
+                (pkgs.runCommand "steamrun-lib" { }
+                  "mkdir $out; ln -s ${pkgs.steam-run-free.fhsenv}/usr/lib64 $out/lib"
+                )
+              ]
+              ++ (with pkgs; [
                 # playwright dependencies
                 openssl
                 systemd
@@ -45,7 +51,7 @@
                 pnpm
                 nodejs
                 pre-commit
-              ];
+              ]);
           }).env;
       }
     );

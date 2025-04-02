@@ -72,6 +72,11 @@ jobs:
             test-${{ runner.os }}-${{ steps.setup-node.outputs.node-version }}-pnpm-store-
       - name: Install dependencies
         run: pnpm install
+      # https://github.com/vitest-dev/vitest-browser-react/blob/0f5098200a6d02ecd64c8a5549787c371a532bd2/.github/workflows/ci.yml#L71
+      - name: Install Playwright Dependencies
+        # run only if "playwright" is in the devDependencies
+        run: |
+          python -c "import subprocess as sp; from pathlib import Path; Path('node_modules/playwright').exists() and sp.run(['pnpm', 'exec', 'playwright', 'install'])"
       - name: Build
         run: pnpm build
       - name: Docs
