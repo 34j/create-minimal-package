@@ -51,14 +51,14 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
   ```bash
   GITHUB_USER="johnsmith"
   REPO_NAME="my-cool-package"
-  sed -i.tmp "s/\([^@]\)34j/\1$GITHUB_USER/g; s/create-minimal-package\|my-package-name/$REPO_NAME/g; package.json package-lock.json src/index.ts
+  sed -i.tmp "s/\([^@]\)34j/\1$GITHUB_USER/g; s/create-minimal-package\|my-package-name/$REPO_NAME/g;" package.json package-lock.json src/index.ts
   sed -i.tmp 's/"version": "[0-9.]*"/"version": "0.0.0"/' package.json
   rm *.tmp
   rm CHANGELOG.md
   ```
-3. [Create](https://www.npmjs.com/) and add `NPM_TOKEN` to `Settings/Secrets and variables/Actions/Repository secrets`.
-4. [Create][codecov-url] and add `CODECOV_TOKEN` to `Settings/Secrets and variables/Actions/Repository secrets`.
-5. Install GitHub Apps, [pre-commit.ci lite](https://github.com/apps/pre-commit-ci-lite/installations/select_target) and [Codecov](https://github.com/apps/codecov/installations/select_target).
+3. [Create](https://www.npmjs.com/settings/34j/tokens/) and add `NPM_TOKEN` to [`Settings/Secrets and variables/Actions/Repository secrets`](https://github.com/34j/ag-psd-psdtool/settings/secrets/actions).
+4. [Create][codecov-url] and add `CODECOV_TOKEN` to [`Settings/Secrets and variables/Actions/Repository secrets`](https://github.com/34j/ag-psd-psdtool/settings/secrets/actions).
+5. Install GitHub Apps, [pre-commit.ci **lite**](https://github.com/apps/pre-commit-ci-lite/installations/select_target) and [Codecov](https://github.com/apps/codecov/installations/select_target).
 6. Install [pre-commit](https://pre-commit.com/) using [`uv`](https://github.com/astral-sh/uv) by `uv tool install pre-commit` and install hooks by `pre-commit install`.
 7. Remove everything above `---`.
 
