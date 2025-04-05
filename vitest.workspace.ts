@@ -16,8 +16,11 @@ export default defineWorkspace([
         headless: true,
         provider: 'playwright',
         instances: [
-          { browser: 'firefox' },
           { browser: 'chromium' },
+          // It is highly recommend to give up firefox and webkit support to use v8 coverage provider, which is considered more stable.
+          // { browser: 'firefox' },
+          // Current flake.nix does not support webkit.
+          // { browser: 'webkit' },
         ],
       },
     },

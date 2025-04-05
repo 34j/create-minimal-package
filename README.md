@@ -29,12 +29,12 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
 - 📦Packageing
   - [pnpm](https://pnpm.io/) (⏪️npm)
 - ⚠️ Testing
-  - [⚡️Vitest](https://vitest.dev/) (⏪️[👢Jest](https://jestjs.io/)): several lines for browser testing
+  - [⚡️Vitest](https://vitest.dev/) (⏪️[👢Jest](https://jestjs.io/)): several lines for browser testing (optional, can be removed if Node.js only)
 - 📖Documentation
   - [🌐GitHub Pages](https://pages.github.com/)
   - [📖TypeDoc](https://typedoc.org/): 2 lines for `☆` `P`
 - ❄Nix Support (Optional, only needed for Nix users)
-  - [❄`nix develop --ignore-environment`](https://nix.dev/manual/nix/latest/command-ref/new-cli/nix3-develop): many lines for Playwright support
+  - [❄`nix develop --ignore-environment`](https://nix.dev/manual/nix/latest/command-ref/new-cli/nix3-develop): many lines for Playwright support (optional, can be removed if Node.js only)
 
 <details>
 <summary>Removed Features (to achieve minimalism)</summary>

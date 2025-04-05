@@ -19,9 +19,9 @@
               pkgs:
               [
                 # playwright (firefox) dependencies
-                (pkgs.runCommand "steamrun-lib" { }
-                  "mkdir $out; ln -s ${pkgs.steam-run-free.fhsenv}/usr/lib64 $out/lib"
-                )
+                # (pkgs.runCommand "steamrun-lib" { }
+                #   "mkdir $out; ln -s ${pkgs.steam-run-free.fhsenv}/usr/lib64 $out/lib"
+                # )
               ]
               ++ (with pkgs; [
                 # playwright (chromium) dependencies
