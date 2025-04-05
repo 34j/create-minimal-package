@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/34j/create-minimal-package/compare/v1.4.0...v1.4.1) (2025-04-05)
+
+
+### Bug Fixes
+
+* drop firefox support ([9e72c15](https://github.com/34j/create-minimal-package/commit/9e72c1578e545c63cb44f2fa2b11825b158ac838))
+
 # [1.4.0](https://github.com/34j/create-minimal-package/compare/v1.3.2...v1.4.0) (2025-04-02)
 
 
