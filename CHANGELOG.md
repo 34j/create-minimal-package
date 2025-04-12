@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/34j/create-minimal-package/compare/v1.4.1...v1.5.0) (2025-04-12)
+
+
+### Features
+
+* add submodule ([7d647f2](https://github.com/34j/create-minimal-package/commit/7d647f29ef1ff3d2a8371e8607c28d6321a3662c))
+
 ## [1.4.1](https://github.com/34j/create-minimal-package/compare/v1.4.0...v1.4.1) (2025-04-05)
 
 
