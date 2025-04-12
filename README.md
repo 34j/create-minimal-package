@@ -61,7 +61,8 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
 4. [Create][codecov-url] and add `CODECOV_TOKEN` to [`Settings/Secrets and variables/Actions/Repository secrets`](https://github.com/34j/create-minimal-package/settings/secrets/actions).
 5. Install GitHub Apps, [pre-commit.ci **lite**](https://github.com/apps/pre-commit-ci-lite/installations/select_target) and [Codecov](https://github.com/apps/codecov/installations/select_target).
 6. Install [pre-commit](https://pre-commit.com/) using [`uv`](https://github.com/astral-sh/uv) by `uv tool install pre-commit` and install hooks by `pre-commit install`.
-7. Remove everything above `---`.
+7. Enable Github Pages and set `Source` to `GitHub Actions` from [`Settings/Pages/Build and deployment`](https://github.com/34j/create-minimal-package/settings/pages)
+8. Remove everything above `---`.
 
 > Inspired by [node-module-boilerplate](https://github.com/sindresorhus/node-module-boilerplate) and [typescript-npm-package-template](https://github.com/Atry/typescript-npm-package-template/tree/main), which is great but unnecessarily complex and poorly maintained.
 
