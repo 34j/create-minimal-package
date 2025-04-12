@@ -24,9 +24,10 @@
     "semantic-release",
     "typedoc"
   ],
-  "main": "./dist/index.js",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "files": [
-    "dist/**/*"
+    "dist/src/**/*"
   ],
   "scripts": {
     "build:watch": "tsc --watch --project tsconfig.json",
@@ -59,9 +60,10 @@
   },
   "typedocOptions": {
     "entryPoints": [
-      "./src"
+      "src"
     ],
-    "tsconfig": "./tsconfig.json"
+    "tsconfig": "tsconfig.json",
+    "headings": false
   },
   "release": {
     "plugins": [

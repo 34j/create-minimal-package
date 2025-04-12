@@ -5,6 +5,7 @@
     "lib": ["ESNext"],
     "baseUrl": "src",
     "module": "CommonJS",
+    "declaration": true,
     "outDir": "dist"
   },
   "include": ["src/**/*.ts", "test/**/*.ts"]
