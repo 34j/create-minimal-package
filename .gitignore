@@ -120,3 +120,6 @@ dist
 docs/
 /CHANGELOG.md linguist-generated
 /README.md linguist-generated
+
+# test output
+__screenshots__
