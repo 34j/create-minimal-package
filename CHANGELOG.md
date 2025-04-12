@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/34j/create-minimal-package/compare/v1.5.0...v1.5.1) (2025-04-12)
+
+
+### Bug Fixes
+
+* **package.json:** fix wrong main and files path, fix declaration not bundled ([f94395c](https://github.com/34j/create-minimal-package/commit/f94395c65af65457079b51de87c9d7877dfaca36))
+
 # [1.5.0](https://github.com/34j/create-minimal-package/compare/v1.4.1...v1.5.0) (2025-04-12)
 
 
