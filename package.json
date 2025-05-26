@@ -54,7 +54,7 @@
     "npm-run-all2": "8.0.4",
     "playwright": "1.52.0",
     "semantic-release": "24.2.5",
-    "typedoc": "0.28.4",
+    "typedoc": "0.28.5",
     "typescript": "5.8.3",
     "vitest": "3.1.4"
   },
