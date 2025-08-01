@@ -28,7 +28,7 @@ importers:
         version: 8.38.0(@typescript-eslint/parser@8.38.0(eslint@9.32.0)(typescript@5.9.2))(eslint@9.32.0)(typescript@5.9.2)
       '@vitest/browser':
         specifier: 3.2.4
-        version: 3.2.4(msw@2.7.3(@types/node@22.17.0)(typescript@5.9.2))(playwright@1.54.1)(vite@6.2.4(@types/node@22.17.0)(yaml@2.8.0))(vitest@3.2.4)
+        version: 3.2.4(msw@2.7.3(@types/node@22.17.0)(typescript@5.9.2))(playwright@1.54.2)(vite@6.2.4(@types/node@22.17.0)(yaml@2.8.0))(vitest@3.2.4)
       '@vitest/coverage-v8':
         specifier: 3.2.4
         version: 3.2.4(@vitest/browser@3.2.4)(vitest@3.2.4)
@@ -39,8 +39,8 @@ importers:
         specifier: 8.0.4
         version: 8.0.4
       playwright:
-        specifier: 1.54.1
-        version: 1.54.1
+        specifier: 1.54.2
+        version: 1.54.2
       semantic-release:
         specifier: 24.2.7
         version: 24.2.7(typescript@5.9.2)
@@ -2571,13 +2571,13 @@ packages:
   pkg-types@2.1.0:
     resolution: {integrity: sha512-wmJwA+8ihJixSoHKxZJRBQG1oY8Yr9pGLzRmSsNms0iNWyHHAlZCa7mmKiFR10YPZuz/2k169JiS/inOjBCZ2A==}
 
-  playwright-core@1.54.1:
-    resolution: {integrity: sha512-Nbjs2zjj0htNhzgiy5wu+3w09YetDx5pkrpI/kZotDlDUaYk0HVA5xrBVPdow4SAUIlhgKcJeJg4GRKW6xHusA==}
+  playwright-core@1.54.2:
+    resolution: {integrity: sha512-n5r4HFbMmWsB4twG7tJLDN9gmBUeSPcsBZiWSE4DnYz9mJMAFqr2ID7+eGC9kpEnxExJ1epttwR59LEWCk8mtA==}
     engines: {node: '>=18'}
     hasBin: true
 
-  playwright@1.54.1:
-    resolution: {integrity: sha512-peWpSwIBmSLi6aW2auvrUtf2DqY16YYcCMO8rTVx486jKmDTJg7UAhyrraP98GB8BoPURZP8+nxO7TSd4cPr5g==}
+  playwright@1.54.2:
+    resolution: {integrity: sha512-Hu/BMoA1NAdRUuulyvQC0pEqZ4vQbGfn8f7wPXcnqQmM+zct9UliKxsIkLNmz/ku7LElUNqmaiv1TG/aL5ACsw==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -4072,7 +4072,7 @@ snapshots:
       '@typescript-eslint/types': 8.38.0
       eslint-visitor-keys: 4.2.1
 
-  '@vitest/browser@3.2.4(msw@2.7.3(@types/node@22.17.0)(typescript@5.9.2))(playwright@1.54.1)(vite@6.2.4(@types/node@22.17.0)(yaml@2.8.0))(vitest@3.2.4)':
+  '@vitest/browser@3.2.4(msw@2.7.3(@types/node@22.17.0)(typescript@5.9.2))(playwright@1.54.2)(vite@6.2.4(@types/node@22.17.0)(yaml@2.8.0))(vitest@3.2.4)':
     dependencies:
       '@testing-library/dom': 10.4.0
       '@testing-library/user-event': 14.6.1(@testing-library/dom@10.4.0)
@@ -4084,7 +4084,7 @@ snapshots:
       vitest: 3.2.4(@types/debug@4.1.12)(@types/node@22.17.0)(@vitest/browser@3.2.4)(msw@2.7.3(@types/node@22.17.0)(typescript@5.9.2))(yaml@2.8.0)
       ws: 8.18.2
     optionalDependencies:
-      playwright: 1.54.1
+      playwright: 1.54.2
     transitivePeerDependencies:
       - bufferutil
       - msw
@@ -4108,7 +4108,7 @@ snapshots:
       tinyrainbow: 2.0.0
       vitest: 3.2.4(@types/debug@4.1.12)(@types/node@22.17.0)(@vitest/browser@3.2.4)(msw@2.7.3(@types/node@22.17.0)(typescript@5.9.2))(yaml@2.8.0)
     optionalDependencies:
-      '@vitest/browser': 3.2.4(msw@2.7.3(@types/node@22.17.0)(typescript@5.9.2))(playwright@1.54.1)(vite@6.2.4(@types/node@22.17.0)(yaml@2.8.0))(vitest@3.2.4)
+      '@vitest/browser': 3.2.4(msw@2.7.3(@types/node@22.17.0)(typescript@5.9.2))(playwright@1.54.2)(vite@6.2.4(@types/node@22.17.0)(yaml@2.8.0))(vitest@3.2.4)
     transitivePeerDependencies:
       - supports-color
 
@@ -5950,11 +5950,11 @@ snapshots:
       exsolve: 1.0.4
       pathe: 2.0.3
 
-  playwright-core@1.54.1: {}
+  playwright-core@1.54.2: {}
 
-  playwright@1.54.1:
+  playwright@1.54.2:
     dependencies:
-      playwright-core: 1.54.1
+      playwright-core: 1.54.2
     optionalDependencies:
       fsevents: 2.3.2
 
@@ -6537,7 +6537,7 @@ snapshots:
     optionalDependencies:
       '@types/debug': 4.1.12
       '@types/node': 22.17.0
-      '@vitest/browser': 3.2.4(msw@2.7.3(@types/node@22.17.0)(typescript@5.9.2))(playwright@1.54.1)(vite@6.2.4(@types/node@22.17.0)(yaml@2.8.0))(vitest@3.2.4)
+      '@vitest/browser': 3.2.4(msw@2.7.3(@types/node@22.17.0)(typescript@5.9.2))(playwright@1.54.2)(vite@6.2.4(@types/node@22.17.0)(yaml@2.8.0))(vitest@3.2.4)
     transitivePeerDependencies:
       - jiti
       - less
