@@ -43,7 +43,9 @@ _exclude:
 _skip_if_exists:
   - flake.lock
   - src
+  - 'src/*'
   - test
+  - 'test/*'
   - pnpm-lock.yaml
   - pnpm-workspace.yaml
 _min_copier_version: 9.0.0
