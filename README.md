@@ -26,6 +26,7 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
   - [ESLint](https://eslint.org/): inherits [@antfu/eslint-config](https://www.npmjs.com/package/@antfu/eslint-config)
 - 📦Packageing
   - [pnpm](https://pnpm.io/) (⏪️npm)
+  - [🛡️Trusted Publishing](https://docs.npmjs.com/trusted-publishers)
 - ⚠️ Testing
   - [⚡️Vitest](https://vitest.dev/) (⏪️[👢Jest](https://jestjs.io/)): several lines for browser testing (optional, can be removed if Node.js only)
 - 📖Documentation
@@ -66,14 +67,14 @@ uvx copier copy --trust "gh:34j/create-minimal-package" --vcs-ref main my-cool-p
   rm CHANGELOG.md
   rm *.jinja
   ```
-3. [Create](https://www.npmjs.com/settings/34j/tokens/) and add `NPM_TOKEN` to [`Settings/Secrets and variables/Actions/Repository secrets`](https://github.com/34j/create-minimal-package/settings/secrets/actions).
-4. [Create][codecov-url] and add `CODECOV_TOKEN` to [`Settings/Secrets and variables/Actions/Repository secrets`](https://github.com/34j/create-minimal-package/settings/secrets/actions).
-5. Install GitHub Apps, [pre-commit.ci **lite**](https://github.com/apps/pre-commit-ci-lite/installations/select_target) and [Codecov](https://github.com/apps/codecov/installations/select_target).
-6. Install [pre-commit](https://pre-commit.com/) using [`uv`](https://github.com/astral-sh/uv) by `uv tool install pre-commit` and install hooks by `pre-commit install`.
-7. Enable Github Pages and set `Source` to `GitHub Actions` from [`Settings/Pages/Build and deployment`](https://github.com/34j/create-minimal-package/settings/pages)
-8. Remove everything above `---`.
+3. Install GitHub Apps, [pre-commit.ci **lite**](https://github.com/apps/pre-commit-ci-lite/installations/select_target) and [Codecov](https://github.com/apps/codecov/installations/select_target).
+4. Install [pre-commit](https://pre-commit.com/) using [`uv`](https://github.com/astral-sh/uv) by `uv tool install pre-commit` and install hooks by `pre-commit install`.
+5. Enable Github Pages and set `Source` to `GitHub Actions` from [`Settings/Pages/Build and deployment`](https://github.com/34j/create-minimal-package/settings/pages)
+6. Remove everything above `---`.
 
 > Inspired by [node-module-boilerplate](https://github.com/sindresorhus/node-module-boilerplate) and [typescript-npm-package-template](https://github.com/Atry/typescript-npm-package-template/tree/main), which is great but unnecessarily complex and poorly maintained.
+
+- Enable [Token authentication for public repositories](https://docs.codecov.com/docs/codecov-tokens#uploading-without-a-token) to upload coverage reports without a token.
 
 ---
 
