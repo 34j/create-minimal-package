@@ -42,7 +42,13 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
 
 </details>
 
-## Quickstart
+## Quickstart (Copier)
+
+```shell
+uvx copier copy --trust "gh:34j/create-minimal-package"
+```
+
+## Quickstart (GitHub Template)
 
 1. Click the "Use this template" button.
 2. Replace `GITHUB_USER` and `REPO_NAME` using `sed`:

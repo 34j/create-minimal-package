@@ -1,0 +1,17 @@
+# questions
+project_name:
+  type: str
+  help: What is your project name?
+
+github_user:
+  type: str
+  help: What is your GitHub username?
+
+_min_copier_version: 9.0.0
+_tasks:
+  - 'sed -i.tmp "s/\([^@]\)34j/\1{{ github_user }}/g; s/create-minimal-package\|my-package-name/{{ project_name }}/g;" package.json src/index.ts README.md'
+  - >
+    sed -i.tmp 's/"version": "[0-9.]*"/"version": "0.0.0"/' package.json
+  - 'rm *.tmp'
+  - 'rm src/*.tmp'
+  - rm CHANGELOG.md
