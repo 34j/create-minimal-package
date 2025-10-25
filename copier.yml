@@ -60,7 +60,7 @@ _tasks:
   - 'rm *.tmp'
   - 'rm src/*.tmp'
   # Remove the copier instructions from README.md
-  - ['{{ _copier_python }}', -c, 'from pathlib import Path; txt = Path("README.md").read_text(encoding="utf-8"); txt = txt.split("\n---\n")[-1]; Path("README.md").write_text(txt, encoding="utf-8")']
+  - ['{{ _copier_python }}', -c, 'from pathlib import Path; txt = Path("README.md").read_text(encoding="utf-8"); txt = txt.split("\n---\n---\n")[-1]; Path("README.md").write_text(txt, encoding="utf-8")']
   # Initialize npm package
   - '{% if setup_npm %}npx --yes setup-npm-trusted-publish {{ project_name }}{% endif %}'
   # Initialize Git repository

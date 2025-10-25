@@ -78,6 +78,7 @@ uvx copier copy --trust "gh:34j/create-minimal-package" --vcs-ref main my-cool-p
 - Enable [Token authentication for public repositories](https://docs.codecov.com/docs/codecov-tokens#uploading-without-a-token) to upload coverage reports without a token.
 
 ---
+---
 
 # create-minimal-package
 
