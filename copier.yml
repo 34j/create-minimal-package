@@ -9,6 +9,17 @@ github_user:
   help: What is your GitHub username?
   default: ''
 
+setup_github:
+  type: bool
+  help: Do you want to create a GitHub repository for this project and set it up? (Requires GitHub CLI installed and authenticated)
+  default: true
+
+create-minimal-package-installation-ids:
+  type: str
+  help: Comma separated GitHub App installation IDs to install to the created repository (leave blank to skip)
+  default: ''
+  secret: true
+
 _exclude:
   - CHANGELOG.md
   - copier.yml
@@ -25,6 +36,12 @@ _skip_if_exists:
   - pnpm-workspace.yaml
 _min_copier_version: 9.0.0
 _tasks:
+  # Replace true with false in .copier-answers.yml for options which should not be run on `copier update`
+  -
+    - '{{ _copier_python }}'
+    - -c
+    - >
+      "from pathlib import Path; import re; p = Path('.copier-answers.yml'); p.write_text(re.sub(r'((?:setup_github): )true', r'\\g<1>false', p.read_text()))"
   - 'sed -i.tmp "s/\([^@]\)34j/\1{{ github_user }}/g; s/create-minimal-package\|my-package-name/{{ project_name }}/g;" package.json src/index.ts README.md'
   - >
     sed -i.tmp 's/"version": "[0-9.]*"/"version": "0.0.0"/' package.json
