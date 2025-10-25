@@ -19,6 +19,13 @@ setup_github:
   help: Do you want to create a GitHub repository for this project and set it up? (Requires GitHub CLI installed and authenticated)
   default: true
 
+github_token:
+  type: str
+  secret: true
+  help: GitHub Token with `repo` and `workflow` scopes (optional)
+  when: '{{ setup_github }}'
+  default: ''
+
 create_minimal_package_installation_ids:
   type: str
   help: Comma separated GitHub App installation IDs to install to the created repository (leave blank to skip)
