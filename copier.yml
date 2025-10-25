@@ -42,10 +42,10 @@ _exclude:
   - .svn
 _skip_if_exists:
   - flake.lock
-  - 'src/*'
+  - src
+  - test
   - pnpm-lock.yaml
   - pnpm-workspace.yaml
-  - 'test/*'
 _min_copier_version: 9.0.0
 _tasks:
   # Replace true with false in .copier-answers.yml for options which should not be run on `copier update`
