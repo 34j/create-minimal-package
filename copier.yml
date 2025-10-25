@@ -42,15 +42,19 @@ _tasks:
     - -c
     - >
       "from pathlib import Path; import re; p = Path('.copier-answers.yml'); p.write_text(re.sub(r'((?:setup_github): )true', r'\\g<1>false', p.read_text()))"
+  # Replace github_user and project_name in files
   - 'sed -i.tmp "s/\([^@]\)34j/\1{{ github_user }}/g; s/create-minimal-package\|my-package-name/{{ project_name }}/g;" package.json src/index.ts README.md'
   - >
     sed -i.tmp 's/"version": "[0-9.]*"/"version": "0.0.0"/' package.json
   - 'rm *.tmp'
   - 'rm src/*.tmp'
+  # Remove the copier instructions from README.md
   - ['{{ _copier_python }}', -c, 'from pathlib import Path; txt = Path("README.md").read_text(encoding="utf-8"); txt = txt.split("\n---\n")[-1]; Path("README.md").write_text(txt, encoding="utf-8")']
+  # Initialize Git repository
   - '{% if setup_github %}git init{% endif %}'
   - '{% if setup_github %}git add .{% endif %}'
   - '{% if setup_github %}git commit -m "chore: initial commit"{% endif %}'
+  # Create GitHub repository and push
   - '{% if setup_github %}gh repo create {{ github_user }}/{{ project_name }} -d "" --public --remote=origin --source=. --push{% endif %}'
   - '{% if setup_github %}gh repo edit --delete-branch-on-merge --enable-projects=false --enable-wiki=false --enable-merge-commit=false --enable-squash-merge --enable-rebase-merge=false{% endif %}'
   # set branch protection
