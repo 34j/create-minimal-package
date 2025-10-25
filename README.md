@@ -64,6 +64,7 @@ uvx copier copy --trust "gh:34j/create-minimal-package" --vcs-ref main my-cool-p
   rm *.tmp
   rm src/*.tmp
   rm CHANGELOG.md
+  rm *.jinja
   ```
 3. [Create](https://www.npmjs.com/settings/34j/tokens/) and add `NPM_TOKEN` to [`Settings/Secrets and variables/Actions/Repository secrets`](https://github.com/34j/create-minimal-package/settings/secrets/actions).
 4. [Create][codecov-url] and add `CODECOV_TOKEN` to [`Settings/Secrets and variables/Actions/Repository secrets`](https://github.com/34j/create-minimal-package/settings/secrets/actions).
