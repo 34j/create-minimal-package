@@ -7,7 +7,15 @@ project_name:
 github_user:
   type: str
   help: What is your GitHub username?
+  default: ''
 
+_exclude:
+  - CHANGELOG.md
+_skip_if_exists:
+  - flake.lock
+  - 'src/*'
+  - pnpm-lock.yaml
+  - pnpm-workspace.yaml
 _min_copier_version: 9.0.0
 _tasks:
   - 'sed -i.tmp "s/\([^@]\)34j/\1{{ github_user }}/g; s/create-minimal-package\|my-package-name/{{ project_name }}/g;" package.json src/index.ts README.md'
@@ -15,4 +23,4 @@ _tasks:
     sed -i.tmp 's/"version": "[0-9.]*"/"version": "0.0.0"/' package.json
   - 'rm *.tmp'
   - 'rm src/*.tmp'
-  - rm CHANGELOG.md
+  - ['{{ _copier_python }}', -c, 'from pathlib import Path; txt = Path("README.md").read_text(); txt = txt.split("\n---\n")[-1]; Path("README.md").write_text(txt)']
