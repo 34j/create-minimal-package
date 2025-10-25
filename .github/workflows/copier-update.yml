@@ -3,7 +3,7 @@ name: Copier Update
 on:
   workflow_dispatch:
   schedule:
-    - cron: '3 19 * * *'
+    - cron: '3 16 * * *'
 
 jobs:
   upgrade:
