@@ -48,6 +48,9 @@ _tasks:
   - 'rm *.tmp'
   - 'rm src/*.tmp'
   - ['{{ _copier_python }}', -c, 'from pathlib import Path; txt = Path("README.md").read_text(encoding="utf-8"); txt = txt.split("\n---\n")[-1]; Path("README.md").write_text(txt, encoding="utf-8")']
+  - '{% if setup_github %}git init{% endif %}'
+  - '{% if setup_github %}git add .{% endif %}'
+  - '{% if setup_github %}git commit -m "chore: initial commit"{% endif %}'
   - '{% if setup_github %}gh repo create {{ github_user }}/{{ project_name }} -d "" --public --remote=origin --source=. --push{% endif %}'
   - '{% if setup_github %}gh repo edit --delete-branch-on-merge --enable-projects=false --enable-wiki=false --enable-merge-commit=false --enable-squash-merge --enable-rebase-merge=false{% endif %}'
   # set branch protection
