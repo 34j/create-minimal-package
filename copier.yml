@@ -9,6 +9,11 @@ github_user:
   help: What is your GitHub username?
   default: ''
 
+setup_npm:
+  type: bool
+  help: Do you want to reserve the npm package name for setting up trusted publishing?
+  default: true
+
 setup_github:
   type: bool
   help: Do you want to create a GitHub repository for this project and set it up? (Requires GitHub CLI installed and authenticated)
