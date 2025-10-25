@@ -55,6 +55,7 @@ uvx copier copy --trust "gh:34j/create-minimal-package" --vcs-ref main my-cool-p
 
 ## Quickstart (GitHub Template)
 
+0. Run `npx setup-npm-trusted-publish my-cool-package` to reserve the package name and allow trusted publishing.
 1. Click the "Use this template" button.
 2. Replace `GITHUB_USER` and `REPO_NAME` using `sed`:
   ```bash
