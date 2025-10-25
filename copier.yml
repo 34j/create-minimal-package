@@ -23,7 +23,6 @@ create-minimal-package-installation-ids:
   type: str
   help: Comma separated GitHub App installation IDs to install to the created repository (leave blank to skip)
   default: ''
-  secret: true
 
 _exclude:
   - CHANGELOG.md
