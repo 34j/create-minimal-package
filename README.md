@@ -45,7 +45,11 @@ Zero-knowledge ***minimalistic*** template for creating a new npm package.
 ## Quickstart (Copier)
 
 ```shell
-uvx copier copy --trust "gh:34j/create-minimal-package"
+uvx copier copy --trust "gh:34j/create-minimal-package" --vcs-ref main my-cool-package
+🎤 What is your project name?
+   my-cool-package
+🎤 What is your GitHub username?
+   34j
 ```
 
 ## Quickstart (GitHub Template)
