@@ -3,18 +3,19 @@ import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
   test: {
-    include: ['./test/**/*.{test,spec}.?(c|m)[jt]s?(x)'],
     projects: [
       {
         // node test config
         test: {
           name: 'node',
+          include: ['./test/**/*.{test,spec}.?(c|m)[jt]s?(x)'],
         },
       },
       {
         // browser test config
         test: {
           name: 'browser',
+          include: ['./test/**/*.{test,spec}.?(c|m)[jt]s?(x)'],
           browser: {
             enabled: true,
             headless: true,
