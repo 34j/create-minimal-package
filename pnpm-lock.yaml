@@ -30,7 +30,7 @@ importers:
         specifier: 4.0.3
         version: 4.0.3(msw@2.7.3(@types/node@24.9.1)(typescript@5.9.3))(vite@7.1.12(@types/node@24.9.1)(yaml@2.8.1))(vitest@4.0.3)
       '@vitest/browser-playwright':
-        specifier: ^4.0.3
+        specifier: 4.0.3
         version: 4.0.3(msw@2.7.3(@types/node@24.9.1)(typescript@5.9.3))(playwright@1.56.1)(vite@7.1.12(@types/node@24.9.1)(yaml@2.8.1))(vitest@4.0.3)
       '@vitest/coverage-v8':
         specifier: 4.0.3
