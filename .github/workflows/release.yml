@@ -138,6 +138,8 @@ jobs:
         run: pnpm build
       - name: Docs
         run: pnpm typedoc
+      - name: Update npm
+        run: npm install -g npm@latest
       - name: Release
         if: github.ref_name == 'main'
         run: npx semantic-release
