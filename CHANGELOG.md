@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/34j/create-minimal-package/compare/v1.6.0...v1.7.0) (2025-10-26)
+
+
+### Features
+
+* trigger release ([e5d773a](https://github.com/34j/create-minimal-package/commit/e5d773aac39c91e0f3d67696a4d264524de5b86b))
+
 # [1.6.0](https://github.com/34j/create-minimal-package/compare/v1.5.1...v1.6.0) (2025-10-26)
 
 
