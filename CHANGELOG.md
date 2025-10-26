@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/34j/create-minimal-package/compare/v1.5.1...v1.5.2) (2025-10-26)
+
+
+### Bug Fixes
+
+* fix cache not working ([67c589b](https://github.com/34j/create-minimal-package/commit/67c589b20feed3d21f93a6c27e6d17f457cc1508))
+
 ## [1.5.1](https://github.com/34j/create-minimal-package/compare/v1.5.0...v1.5.1) (2025-04-12)
 
 
