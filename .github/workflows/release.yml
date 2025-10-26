@@ -30,7 +30,8 @@ jobs:
         with:
           run_install: false
           version: 10
-      - uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6
+      - id: setup-node
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6
         with:
           node-version: lts/*
       - id: pnpm-cache-path
@@ -117,7 +118,8 @@ jobs:
         with:
           run_install: false
           version: 10
-      - uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6
+      - id: setup-node
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6
         with:
           node-version: lts/*
       - id: pnpm-cache-path
