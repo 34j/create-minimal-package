@@ -6,16 +6,18 @@ default_stages: [pre-commit]
 ci:
   autofix_commit_msg: 'chore(pre-commit.ci): auto fixes'
   autoupdate_commit_msg: 'chore(pre-commit.ci): pre-commit autoupdate'
-  skip: [nixfmt]
+  skip:
+    # - eslint
+    - nixfmt
 
 repos:
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v4.4.1
+    rev: v4.9.1
     hooks:
       - id: commitizen
         stages: [commit-msg]
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: debug-statements
       - id: check-builtin-literals
@@ -31,14 +33,17 @@ repos:
   # additional_dependencies won't work for ESM modules
   # https://stackoverflow.com/questions/77253791/how-to-get-new-style-eslint-config-working-with-pre-commit
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v9.22.0
+    rev: v9.38.0
     hooks:
       - id: eslint
         entry: eslint --fix --no-warn-ignored
         files: ''
         types: [file]
+        additional_dependencies:
+          - eslint
+          - '@antfu/eslint-config'
   - repo: https://github.com/NixOS/nixfmt
-    rev: '3006577'
+    rev: v1.1.0
     hooks:
       - id: nixfmt
   - repo: https://github.com/codespell-project/codespell
