@@ -3,6 +3,20 @@
 
 ### Bug Fixes
 
+* do not update npm ([04df635](https://github.com/34j/create-minimal-package/commit/04df635a33c67a7c760fc5ea8a1ed3773ce7f6a4))
+* do not update npm ([87ea333](https://github.com/34j/create-minimal-package/commit/87ea33308449554b0e8281f503b0678278c5d962))
+* do not update npm ([96e98ef](https://github.com/34j/create-minimal-package/commit/96e98ef6b6518873d76eb4f86fdaf8ced3b943ad))
+* do not update npm ([36b02bd](https://github.com/34j/create-minimal-package/commit/36b02bdee82343c6afa9a46526651c9d45aad6a3))
+* do not update npm ([d6f3c27](https://github.com/34j/create-minimal-package/commit/d6f3c27d28d9a4790bb5029cf49b9824d2e34b32))
+* do not update npm ([3b4fa12](https://github.com/34j/create-minimal-package/commit/3b4fa12f02a76d4ab20b6239b39b53ce93a0bd27))
+* fix cache not working ([6a92a0e](https://github.com/34j/create-minimal-package/commit/6a92a0e3aeff557911e7bf432591a2325586c7ca))
+* fix cache not working ([67c589b](https://github.com/34j/create-minimal-package/commit/67c589b20feed3d21f93a6c27e6d17f457cc1508))
+
+## [1.5.2](https://github.com/34j/create-minimal-package/compare/v1.5.1...v1.5.2) (2025-10-26)
+
+
+### Bug Fixes
+
 * fix cache not working ([6a92a0e](https://github.com/34j/create-minimal-package/commit/6a92a0e3aeff557911e7bf432591a2325586c7ca))
 * fix cache not working ([67c589b](https://github.com/34j/create-minimal-package/commit/67c589b20feed3d21f93a6c27e6d17f457cc1508))
 
