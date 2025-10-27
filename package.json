@@ -39,7 +39,8 @@
     "test:watch": "vitest --watch --coverage --coverage.include=src",
     "test": "vitest --coverage --coverage.include=src",
     "watch": "npm-run-all --race --parallel *:watch",
-    "update": "npm-check-updates -u"
+    "update": "npm-check-updates -u",
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
     "@antfu/eslint-config": "6.1.0",

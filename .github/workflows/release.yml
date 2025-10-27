@@ -138,16 +138,14 @@ jobs:
         run: pnpm build
       - name: Docs
         run: pnpm typedoc
-      - name: Update npm
-        run: npm install -g npm@latest
       - name: Release
         if: github.ref_name == 'main'
-        run: npx semantic-release
+        run: pnpm semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Release (Dry Run)
         if: github.ref_name != 'main'
-        run: npx semantic-release --dry-run
+        run: pnpm semantic-release --dry-run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload Documentation
