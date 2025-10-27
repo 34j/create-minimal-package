@@ -140,12 +140,12 @@ jobs:
         run: pnpm typedoc
       - name: Release
         if: github.ref_name == 'main'
-        run: pnpm semantic-release
+        run: npx --package=semantic-release --package=@semantic-release/git --package=@semantic-release/changelog semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Release (Dry Run)
         if: github.ref_name != 'main'
-        run: pnpm semantic-release --dry-run
+        run: npx --package=semantic-release --package=@semantic-release/git --package=@semantic-release/changelog semantic-release --dry-run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload Documentation
