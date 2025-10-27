@@ -1,3 +1,10 @@
+## [1.7.4](https://github.com/34j/create-minimal-package/compare/v1.7.3...v1.7.4) (2025-10-27)
+
+
+### Bug Fixes
+
+* follow semantic-release's recommendation to install using npx ([d803ba4](https://github.com/34j/create-minimal-package/commit/d803ba46e3edd9ced04277a9fcd97a7efe1f06fb))
+
 ## [1.7.3](https://github.com/34j/create-minimal-package/compare/v1.7.2...v1.7.3) (2025-10-27)
 
 
