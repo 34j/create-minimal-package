@@ -121,7 +121,7 @@ jobs:
       - id: setup-node
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6
         with:
-          node-version: lts/*
+          node-version: '*'
       - id: pnpm-cache-path
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
@@ -138,8 +138,6 @@ jobs:
         run: pnpm build
       - name: Docs
         run: pnpm typedoc
-      - name: Update npm
-        run: npm install -g npm@latest
       - name: Release
         if: github.ref_name == 'main'
         run: npx semantic-release
