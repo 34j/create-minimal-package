@@ -1,3 +1,10 @@
+## [1.7.2](https://github.com/34j/create-minimal-package/compare/v1.7.1...v1.7.2) (2025-10-27)
+
+
+### Bug Fixes
+
+* revert "fix: upgrade setup-node to remove Update npm" ([2b1a3cd](https://github.com/34j/create-minimal-package/commit/2b1a3cdda5d2d16721e5d0a70b8ae0f12c8427b3))
+
 ## [1.7.1](https://github.com/34j/create-minimal-package/compare/v1.7.0...v1.7.1) (2025-10-27)
 
 
