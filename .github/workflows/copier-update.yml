@@ -22,13 +22,13 @@ jobs:
       - id: copier-recopy
         if: ${{ failure() && steps.copier-update.conclusion == 'failure' }}
         run: uvx copier recopy --trust --vcs-ref main --exclude src --exclude test --exclude package.json --defaults --overwrite
-      - uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7
+      - uses: peter-evans/create-pull-request@84ae59a2cdc2258d6fa0732dd66352dddae2a412 # v7
         if: ${{ steps.copier-update.conclusion == 'success' }}
         with:
           branch: chore/copier-update
           title: 'chore(deps): run `copier update`'
           commit-message: 'chore(deps): run `copier update`'
-      - uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7
+      - uses: peter-evans/create-pull-request@84ae59a2cdc2258d6fa0732dd66352dddae2a412 # v7
         if: ${{ failure() && steps.copier-recopy.conclusion == 'success' }}
         with:
           branch: chore/copier-recopy
