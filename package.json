@@ -43,7 +43,7 @@
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "6.2.0",
+    "@antfu/eslint-config": "6.3.0",
     "@tsconfig/strictest": "2.0.8",
     "@types/node": "24.10.1",
     "@typescript-eslint/eslint-plugin": "8.48.1",
