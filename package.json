@@ -47,15 +47,15 @@
     "@tsconfig/strictest": "2.0.8",
     "@types/node": "24.10.4",
     "@typescript-eslint/eslint-plugin": "8.50.0",
-    "@vitest/browser": "4.0.15",
-    "@vitest/browser-playwright": "4.0.15",
-    "@vitest/coverage-v8": "4.0.15",
+    "@vitest/browser": "4.0.16",
+    "@vitest/browser-playwright": "4.0.16",
+    "@vitest/coverage-v8": "4.0.16",
     "eslint": "9.39.2",
     "npm-run-all2": "8.0.4",
     "playwright": "1.57.0",
     "typedoc": "0.28.15",
     "typescript": "5.9.3",
-    "vitest": "4.0.15"
+    "vitest": "4.0.16"
   },
   "typedocOptions": {
     "entryPoints": [
