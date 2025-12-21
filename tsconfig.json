@@ -3,8 +3,10 @@
   "compilerOptions": {
     "target": "ES2016",
     "lib": ["ESNext"],
-    "baseUrl": "src",
     "module": "CommonJS",
+    "paths": {
+      "*": ["./src/*"]
+    },
     "declaration": true,
     "outDir": "dist"
   },
