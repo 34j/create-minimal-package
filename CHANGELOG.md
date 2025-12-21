@@ -1,3 +1,10 @@
+## [1.7.5](https://github.com/34j/create-minimal-package/compare/v1.7.4...v1.7.5) (2025-12-21)
+
+
+### Bug Fixes
+
+* remove baseUrl ([6bf9147](https://github.com/34j/create-minimal-package/commit/6bf91475a61a0f5c38173526ff9148803c655611))
+
 ## [1.7.4](https://github.com/34j/create-minimal-package/compare/v1.7.3...v1.7.4) (2025-10-27)
 
 
