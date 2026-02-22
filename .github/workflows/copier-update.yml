@@ -14,6 +14,9 @@ jobs:
   update:
     name: Update
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        update-package-json: [true, false]
     permissions:
       contents: write
       pull-requests: write
@@ -24,25 +27,27 @@ jobs:
           python-version: '3.14'
       - uses: astral-sh/setup-uv@eac588ad8def6316056a12d4907a9d4d84ff7a3b # v7
       - name: Run copier update
-        run: uvx copier@latest update --trust --vcs-ref main --exclude src --exclude test --exclude package.json --defaults
+        run: uvx copier@latest update --trust --vcs-ref main --exclude src --exclude test $([ "${{ matrix['update-package-json'] }}" = "true" ] || echo "--exclude package.json") --defaults || true
       - name: Apply incoming changes
         run: |
           git diff --name-only --diff-filter=U -z | while IFS= read -r -d '' file; do
             git checkout --theirs -- "$file"
           done
           git add -A
-      - name: Delete remote branch
-        run: git push origin --delete chore/copier-auto-update || true
       - uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8
         with:
-          branch: chore/copier-auto-update
-          title: 'chore(deps): run `copier update`'
+          branch: chore/copier-auto-update-${{ matrix['update-package-json'] && 'with-package-json' || 'without-package-json' }}
+          title: |
+            chore(deps): run `copier update` ${{ matrix['update-package-json'] && 'with package.json' || 'without package.json' }}
           commit-message: 'chore(deps): run `copier update`'
           token: ${{ secrets.GH_PAT }}
 
   recopy:
     name: Recopy
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        update-package-json: [true, false]
     permissions:
       contents: write
       pull-requests: write
@@ -53,12 +58,11 @@ jobs:
           python-version: '3.14'
       - uses: astral-sh/setup-uv@eac588ad8def6316056a12d4907a9d4d84ff7a3b # v7
       - name: Run copier recopy
-        run: uvx copier@latest recopy --trust --vcs-ref main --exclude src --exclude test --exclude package.json --defaults --overwrite
-      - name: Delete remote branch
-        run: git push origin --delete chore/copier-auto-recopy || true
+        run: uvx copier@latest recopy --trust --vcs-ref main --exclude src --exclude test $([ "${{ matrix['update-package-json'] }}" = "true" ] || echo "--exclude package.json") --defaults --overwrite || true
       - uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8
         with:
-          branch: chore/copier-auto-recopy
-          title: 'chore(deps): run `copier recopy`'
+          branch: chore/copier-auto-recopy-${{ matrix['update-package-json'] && 'with-package-json' || 'without-package-json' }}
+          title: |
+            chore(deps): run `copier recopy` ${{ matrix['update-package-json'] && 'with package.json' || 'without package.json' }}
           commit-message: 'chore(deps): run `copier recopy`'
           token: ${{ secrets.GH_PAT }}
