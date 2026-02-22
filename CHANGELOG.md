@@ -1,3 +1,10 @@
+## [1.7.8](https://github.com/34j/create-minimal-package/compare/v1.7.7...v1.7.8) (2026-02-22)
+
+
+### Bug Fixes
+
+* copier update ([91a48ce](https://github.com/34j/create-minimal-package/commit/91a48ceff223c5ad1aa84d39d22f9e19b56d1e31))
+
 ## [1.7.7](https://github.com/34j/create-minimal-package/compare/v1.7.6...v1.7.7) (2026-02-22)
 
 
