@@ -1,3 +1,10 @@
+## [1.7.6](https://github.com/34j/create-minimal-package/compare/v1.7.5...v1.7.6) (2026-02-22)
+
+
+### Bug Fixes
+
+* **ci:** do not hardcode version ([da2425a](https://github.com/34j/create-minimal-package/commit/da2425aff1b7d329e0d7a86fc7e831069093696d))
+
 ## [1.7.5](https://github.com/34j/create-minimal-package/compare/v1.7.4...v1.7.5) (2025-12-21)
 
 
