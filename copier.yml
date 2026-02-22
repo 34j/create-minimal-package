@@ -59,7 +59,7 @@ _tasks:
   # Replace github_user and project_name in files
   - 'sed -i.tmp "s/\([^@]\)34j/\1{{ github_user }}/g; s/create-minimal-package\|my-package-name/{{ project_name }}/g;" package.json src/index.ts README.md || true'
   - >
-    sed -i.tmp 's/"version": "[0-9.]*"/"version": "0.0.0"/' package.json || true
+    {% if "package.json" not in _copier_conf.exclude and "package.json" not in _copier_conf.skip_if_exists %}sed -i.tmp 's/"version": "[0-9.]*"/"version": "0.0.0"/' package.json || true{% endif %}
   - 'rm *.tmp || true'
   - 'rm src/*.tmp || true'
   # Remove the copier instructions from README.md
