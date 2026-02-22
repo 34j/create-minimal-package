@@ -1,3 +1,10 @@
+## [1.7.11](https://github.com/34j/create-minimal-package/compare/v1.7.10...v1.7.11) (2026-02-22)
+
+
+### Bug Fixes
+
+* do not replace version if package.json in exclude ([18c6065](https://github.com/34j/create-minimal-package/commit/18c60652c3c7a40ac55c4fdfe54e0ef9c00e0394))
+
 ## [1.7.10](https://github.com/34j/create-minimal-package/compare/v1.7.9...v1.7.10) (2026-02-22)
 
 
