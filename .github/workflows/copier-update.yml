@@ -6,7 +6,7 @@ on:
     - cron: '3 16 * * *'
 
 jobs:
-  upgrade:
+  update:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -17,20 +17,29 @@ jobs:
         with:
           python-version: '3.14'
       - uses: astral-sh/setup-uv@eac588ad8def6316056a12d4907a9d4d84ff7a3b # v7
-      - id: copier-update
+      - name: Run copier update
         run: uvx copier update --trust --vcs-ref main --exclude src --exclude test --exclude package.json --defaults
-      - id: copier-recopy
-        if: ${{ failure() && steps.copier-update.conclusion == 'failure' }}
-        run: uvx copier recopy --trust --vcs-ref main --exclude src --exclude test --exclude package.json --defaults --overwrite
       - uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8
-        if: ${{ steps.copier-update.conclusion == 'success' }}
         with:
-          branch: chore/copier-update
+          branch: chore/copier-auto-update
           title: 'chore(deps): run `copier update`'
           commit-message: 'chore(deps): run `copier update`'
-      - uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8
-        if: ${{ failure() && steps.copier-recopy.conclusion == 'success' }}
+
+  recopy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6
         with:
-          branch: chore/copier-recopy
+          python-version: '3.14'
+      - uses: astral-sh/setup-uv@eac588ad8def6316056a12d4907a9d4d84ff7a3b # v7
+      - name: Run copier recopy
+        run: uvx copier recopy --trust --vcs-ref main --exclude src --exclude test --exclude package.json --defaults --overwrite
+      - uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8
+        with:
+          branch: chore/copier-auto-recopy
           title: 'chore(deps): run `copier recopy`'
           commit-message: 'chore(deps): run `copier recopy`'
