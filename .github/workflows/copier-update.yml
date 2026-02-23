@@ -26,10 +26,16 @@ jobs:
       - uses: astral-sh/setup-uv@eac588ad8def6316056a12d4907a9d4d84ff7a3b # v7
       - name: Run copier update
         run: uvx copier@latest update --trust --vcs-ref main --exclude src --exclude test $([ "${{ matrix['update-package-json'] }}" = "true" ] || echo "--exclude package.json") --defaults || true
-      - name: Apply incoming changes
+      - name: Accept both changes for all merge conflicts
         run: |
+          tmp_dir="$(mktemp -d)"
+          trap 'rm -rf "$tmp_dir"' EXIT
           git diff --name-only --diff-filter=U -z | while IFS= read -r -d '' file; do
-            git checkout --theirs -- "$file"
+            git show ":1:$file" > "$tmp_dir/base"
+            git show ":2:$file" > "$tmp_dir/ours"
+            git show ":3:$file" > "$tmp_dir/theirs"
+            git merge-file --union "$tmp_dir/ours" "$tmp_dir/base" "$tmp_dir/theirs"
+            cat "$tmp_dir/ours" > "$file"
           done
           git add -A
       - uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8
