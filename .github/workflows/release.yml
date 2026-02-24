@@ -61,7 +61,7 @@ jobs:
         continue-on-error: true
         run: uvx prek@latest run --all-files
       - name: Commit prek fixes
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' && secrets.GH_PAT != ''
         run: |
           set -euo pipefail
 
@@ -76,6 +76,10 @@ jobs:
           git add -A
           git commit -m "chore(prek): auto fixes"
           git push
+        # Additional settings are needed to trigger further workflow runs
+        # https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#triggering-further-workflow-runs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
   test:
     runs-on: ubuntu-latest
