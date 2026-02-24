@@ -24,8 +24,15 @@ jobs:
   lint:
     name: Lint
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        with:
+          fetch-depth: 0
+          # If pull_request, head ref. If push, ref.
+          ref: ${{ github.head_ref || github.ref }}
       - uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4
         with:
           run_install: false
@@ -46,9 +53,29 @@ jobs:
             lint-${{ runner.os }}-${{ steps.setup-node.outputs.node-version }}-pnpm-store-
       - name: Install dependencies
         run: pnpm install
-      - uses: pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd # v3.0.1
-      - uses: pre-commit-ci/lite-action@5d6cc0eb514c891a40562a58a8e71576c5c7fb43 # v1.1.0
-        if: always()
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6
+        with:
+          python-version: '3.14'
+      - uses: astral-sh/setup-uv@eac588ad8def6316056a12d4907a9d4d84ff7a3b # v7
+      - name: Run prek
+        continue-on-error: true
+        run: uvx prek@latest run --all-files
+      - name: Commit prek fixes
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          set -euo pipefail
+
+          # exit if there are no changes to commit
+          if [[ -z "$(git status --porcelain)" ]]; then
+            exit 0
+          fi
+
+          # commit and push changes
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore(prek): auto fixes"
+          git push
 
   test:
     runs-on: ubuntu-latest
