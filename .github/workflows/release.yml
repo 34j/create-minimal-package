@@ -61,7 +61,7 @@ jobs:
         continue-on-error: true
         run: uvx prek@latest run --all-files
       - name: Commit prek fixes
-        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        if: github.event_name == 'pull_request'
         run: |
           set -euo pipefail
 
