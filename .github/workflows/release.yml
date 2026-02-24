@@ -61,7 +61,7 @@ jobs:
         continue-on-error: true
         run: uvx prek@latest run --all-files
       - name: Commit prek fixes
-        if: github.event_name == 'pull_request' && secrets.GH_PAT != ''
+        if: github.event_name == 'pull_request' && env.GITHUB_TOKEN != ''
         run: |
           set -euo pipefail
 
