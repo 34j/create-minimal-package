@@ -31,6 +31,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with:
           fetch-depth: 0
+          token: ${{ secrets.GH_PAT || github.token }}
           # If pull_request, head ref. If push, ref.
           ref: ${{ github.head_ref || github.ref }}
       - uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4
@@ -71,9 +72,12 @@ jobs:
           fi
 
           # commit and push changes
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git add -A
           git commit -m "chore(prek): auto fixes"
-          git push
+          git push origin "HEAD:${GITHUB_HEAD_REF}"
         # Additional settings are needed to trigger further workflow runs
         # https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#triggering-further-workflow-runs
         env:
