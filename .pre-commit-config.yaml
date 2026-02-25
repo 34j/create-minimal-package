@@ -13,7 +13,7 @@ ci:
 
 repos:
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v4.9.1
+    rev: v4.13.8
     hooks:
       - id: commitizen
         stages: [commit-msg]
@@ -34,7 +34,7 @@ repos:
   # additional_dependencies won't work for ESM modules
   # https://stackoverflow.com/questions/77253791/how-to-get-new-style-eslint-config-working-with-pre-commit
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v9.38.0
+    rev: v10.0.1
     hooks:
       - id: eslint
         entry: eslint --fix --no-warn-ignored
