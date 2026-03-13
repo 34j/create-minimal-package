@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6
         with:
           python-version: '3.14'
-      - uses: astral-sh/setup-uv@6ee6290f1cbc4156c0bdd66691b2c144ef8df19a # v7
+      - uses: astral-sh/setup-uv@e06108dd0aef18192324c70427afc47652e63a82 # v7
       - name: Run copier update
         run: uvx copier@latest update --trust --vcs-ref main --exclude src --exclude test $([ "${{ matrix['update-package-json'] }}" = "true" ] || echo "--exclude package.json") --defaults || true
       - name: Accept both changes for all merge conflicts
@@ -60,7 +60,7 @@ jobs:
       - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6
         with:
           python-version: '3.14'
-      - uses: astral-sh/setup-uv@6ee6290f1cbc4156c0bdd66691b2c144ef8df19a # v7
+      - uses: astral-sh/setup-uv@e06108dd0aef18192324c70427afc47652e63a82 # v7
       - name: Run copier recopy
         run: uvx copier@latest recopy --trust --vcs-ref main --exclude src --exclude test $([ "${{ matrix['update-package-json'] }}" = "true" ] || echo "--exclude package.json") --defaults --overwrite || true
       - uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8
