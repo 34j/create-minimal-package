@@ -46,7 +46,7 @@
     "@antfu/eslint-config": "8.2.0",
     "@tsconfig/strictest": "2.0.8",
     "@types/node": "24.12.2",
-    "@typescript-eslint/eslint-plugin": "8.58.1",
+    "@typescript-eslint/eslint-plugin": "8.58.2",
     "@vitest/browser": "4.1.4",
     "@vitest/browser-playwright": "4.1.4",
     "@vitest/coverage-v8": "4.1.4",
