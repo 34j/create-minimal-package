@@ -52,7 +52,7 @@
     "@vitest/coverage-v8": "4.1.6",
     "eslint": "10.3.0",
     "npm-run-all2": "8.0.4",
-    "playwright": "1.59.1",
+    "playwright": "1.60.0",
     "typedoc": "0.28.19",
     "typescript": "6.0.3",
     "vitest": "4.1.6"
