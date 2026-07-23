@@ -54,7 +54,7 @@
     "npm-run-all2": "9.0.2",
     "playwright": "1.61.1",
     "typedoc": "0.28.20",
-    "typescript": "6.0.3",
+    "typescript": "7.0.2",
     "vitest": "4.1.10"
   },
   "typedocOptions": {
