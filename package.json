@@ -50,7 +50,7 @@
     "@vitest/browser": "5.0.0",
     "@vitest/browser-playwright": "5.0.0",
     "@vitest/coverage-v8": "5.0.0",
-    "eslint": "10.9.1",
+    "eslint": "10.10.0",
     "npm-run-all2": "9.0.3",
     "playwright": "1.62.1",
     "typedoc": "0.28.20",
