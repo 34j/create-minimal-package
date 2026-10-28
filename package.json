@@ -45,7 +45,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "10.0.0",
     "@tsconfig/strictest": "2.0.8",
-    "@types/node": "24.19.2",
+    "@types/node": "26.6.5",
     "@typescript-eslint/eslint-plugin": "8.72.0",
     "@vitest/browser": "5.0.5",
     "@vitest/browser-playwright": "5.0.5",
